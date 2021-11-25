@@ -1,0 +1,8 @@
+{
+  "name": "bitbybit-tutorials",
+  "version": "1.0.0",
+  "description": "Monorepo combining Bitbybit Tutorials web and mobile apps and their shared libraries",
+  "main": "index.js",
+  "author": "Stoyan Garov",
+  "license": "MIT"
+}
