@@ -1,0 +1,13 @@
+.container {
+  padding: 40px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page {
+  background-color: var(--color-bg-primary);
+  padding: 8px 12px;
+  margin-right: 12px;
+  border-radius: 6px;
+}

@@ -1,0 +1,58 @@
+.header {
+  /* position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 9999; */
+}
+
+.nav {
+  height: 80px;
+  padding: 0 1rem;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.item {
+  width: 2rem;
+  font-size: var(--font-size-large);
+}
+.item:not(:last-of-type) {
+  margin-right: 1.5rem;
+}
+.item:first-of-type {
+  margin-right: 1.5rem;
+}
+
+.itemFlex {
+  flex: 1;
+}
+
+@media only screen and (min-width: 576px) {
+}
+
+@media only screen and (min-width: 768px) {
+  .nav {
+    height: 120px;
+    padding: 0 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+}
+
+@media only screen and (min-width: 1200px) {
+  .nav {
+    padding: 0 4.5rem;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .item:first-of-type {
+    margin-right: 5.5rem;
+  }
+}

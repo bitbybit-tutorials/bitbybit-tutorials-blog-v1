@@ -1,0 +1,41 @@
+.container {
+  padding: 1rem 0;
+}
+
+.flexWrapper {
+  align-items: flex-start;
+  display: flex;
+  padding-bottom: 3rem;
+}
+
+.main {
+  width: 100%;
+}
+
+.sidebar {
+  display: none;
+  margin-left: 75px;
+  margin-top: 1rem;
+  max-height: calc(100vh - 4rem);
+  overflow: auto;
+  position: sticky;
+  top: 4rem;
+}
+
+@media only screen and (min-width: 576px) {
+}
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 992px) {
+  .sidebar {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+}
+
+@media only screen and (min-width: 1400px) {
+}

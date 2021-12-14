@@ -1,0 +1,509 @@
+[
+  {
+    "slug": "post-1",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 1,
+    "image": "test.png",
+    "lastUpdated": "02-12-2021",
+    "title": "Implementing a WhatsApp like Swipe to Delete Feature in React Native",
+    "toc": [
+      {
+        "title": "Goal",
+        "id": "goal"
+      },
+      {
+        "title": "Objectives",
+        "id": "objectives"
+      },
+      {
+        "title": "Implementation",
+        "id": "implementation"
+      },
+      {
+        "title": "Animations",
+        "id": "animations"
+      },
+      {
+        "title": "Final Touch",
+        "id": "final-touch"
+      },
+      {
+        "title": "Considerations / Limitations",
+        "id": "considerations/limitations"
+      }
+    ],
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-10",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 10,
+    "lastUpdated": "02-12-2021",
+    "title": "Post 10",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-11",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 11,
+    "lastUpdated": "02-12-2021",
+    "title": "Post 11",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-12",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 12,
+    "lastUpdated": "02-12-2021",
+    "title": "Post 12",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-13",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 13,
+    "lastUpdated": "02-12-2021",
+    "title": "Post 13",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-14",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 14,
+    "lastUpdated": "02-12-2021",
+    "title": "Post 14",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-15",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 15,
+    "lastUpdated": "02-12-2021",
+    "title": "Post 15",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-16",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 16,
+    "lastUpdated": "02-12-2021",
+    "title": "Post 16",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-17",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 17,
+    "lastUpdated": "02-12-2021",
+    "title": "Post 17",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-18",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 18,
+    "lastUpdated": "02-12-2021",
+    "title": "Post 18",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-19",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 19,
+    "lastUpdated": "02-12-2021",
+    "title": "Post 19",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-2",
+    "category": [
+      "JavaScript",
+      "Next"
+    ],
+    "created": "02-12-2021",
+    "id": 2,
+    "image": "test.png",
+    "lastUpdated": "03-12-2021",
+    "title": "Implementing a WhatsApp like Swipe to Delete Feature in React Native",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-20",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 20,
+    "lastUpdated": "02-12-2021",
+    "title": "Post 20",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-21",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 21,
+    "lastUpdated": "02-12-2021",
+    "title": "Post 21",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-22",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 22,
+    "lastUpdated": "02-12-2021",
+    "title": "Post 22",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-23",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 23,
+    "lastUpdated": "02-12-2021",
+    "title": "Post 23",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-24",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 24,
+    "lastUpdated": "02-12-2021",
+    "title": "Post 24",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-25",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 25,
+    "lastUpdated": "02-12-2021",
+    "title": "Post 25",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-26",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 26,
+    "lastUpdated": "02-12-2021",
+    "title": "Post 26",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-27",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 27,
+    "lastUpdated": "02-12-2021",
+    "title": "Post 27",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-28",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 28,
+    "lastUpdated": "02-12-2021",
+    "title": "Post 28",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-29",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 29,
+    "lastUpdated": "02-12-2021",
+    "title": "Post 29",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-3",
+    "category": [
+      "JavaScript",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 3,
+    "image": "test.png",
+    "lastUpdated": "02-12-2021",
+    "title": "Post 3",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-30",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 30,
+    "lastUpdated": "02-12-2021",
+    "title": "Post 30",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-31",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 31,
+    "lastUpdated": "02-12-2021",
+    "title": "Post 31",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-32",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 32,
+    "lastUpdated": "02-12-2021",
+    "title": "Post 32",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-4",
+    "category": [
+      "JavaScript",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 4,
+    "image": "test.png",
+    "lastUpdated": "02-12-2021",
+    "title": "Post 4",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-5",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 5,
+    "lastUpdated": "02-12-2021",
+    "title": "Post 5",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-6",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 6,
+    "lastUpdated": "02-12-2021",
+    "title": "Post 6",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-7",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 7,
+    "lastUpdated": "02-12-2021",
+    "title": "Post 7",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-8",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 8,
+    "lastUpdated": "02-12-2021",
+    "title": "Post 8",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  },
+  {
+    "slug": "post-9",
+    "category": [
+      "JavaScript",
+      "React",
+      "React Native"
+    ],
+    "created": "01-12-2021",
+    "id": 9,
+    "lastUpdated": "02-12-2021",
+    "title": "Post 9",
+    "type": "post",
+    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
+    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+  }
+]
