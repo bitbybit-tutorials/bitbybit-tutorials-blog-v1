@@ -32,8 +32,8 @@
         "id": "final-touch"
       },
       {
-        "title": "Considerations / Limitations",
-        "id": "considerations / limitations"
+        "title": "Considerations & Limitations",
+        "id": "considerations/limitations"
       }
     ],
     "type": "post"
@@ -74,8 +74,8 @@
           "id": "final-touch"
         },
         {
-          "title": "Considerations / Limitations",
-          "id": "considerations / limitations"
+          "title": "Considerations & Limitations",
+          "id": "considerations/limitations"
         }
       ],
       "type": "post"
