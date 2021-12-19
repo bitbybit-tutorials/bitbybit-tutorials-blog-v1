@@ -30,7 +30,7 @@ export default function Header() {
             <Logo onClick={closeSearch} />
           </li>
           <li className={`${styles.item} ${styles.itemFlex}`}>
-            <Link href={`/posts/pages/1`}>
+            <Link href={`/posts`}>
               <a>Posts</a>
             </Link>
           </li>

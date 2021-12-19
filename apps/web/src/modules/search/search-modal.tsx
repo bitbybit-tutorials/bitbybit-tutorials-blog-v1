@@ -8,7 +8,7 @@ import { PostsContext } from "modules/posts/posts-context";
 import { SearchContext } from "modules/search/search-context";
 import Tags from "modules/tags/tags";
 import utilStyles from "styles/utils.module.css";
-import { getAllCategories } from "utils/posts-client-safe";
+import { getAllCategories } from "modules/posts/utils/posts-client-safe-utils";
 
 type Props = {
   show: boolean;

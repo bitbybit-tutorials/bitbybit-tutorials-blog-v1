@@ -2,19 +2,23 @@ import { useContext, useEffect } from "react";
 
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
-import { POSTS_PER_PAGE } from "constants/posts";
+import { POSTS_PER_PAGE } from "modules/posts/constants/posts-constants";
 import Grid from "modules/grid";
 import { siteTitle } from "modules/layout/layout";
-import { getAllPosts, generateAllPostsJson } from "modules/posts/get-posts";
-import { getAllCategories } from "utils/posts-client-safe";
+import {
+  getPosts,
+  generateAllPostsJson,
+} from "modules/posts/utils/posts-server-utils";
+import { getAllCategories } from "modules/posts/utils/posts-client-safe-utils";
 import Pagination from "modules/pagination";
 import Posts from "modules/posts/posts-component";
 import Section from "modules/section";
 import { SearchContext } from "modules/search/search-context";
 import utilStyles from "styles/utils.module.css";
-import { transformPosts } from "utils/posts-server";
-import { getFilteredPosts } from "utils/posts-client-safe";
+import { transformPosts } from "modules/posts/utils/posts-server-utils";
+import { getFilteredPosts } from "modules/posts/utils/posts-client-safe-utils";
 import {
   transformSlugToTitle,
   transformTitleToSlug,
@@ -34,6 +38,7 @@ export default function Categories({
   posts,
   pagesCount,
 }: Props) {
+  const router = useRouter();
   const { toggleSearch } = useContext(SearchContext);
 
   useEffect(() => {
@@ -57,28 +62,37 @@ export default function Categories({
           </Grid>
         }
       />
-      {pagesCount > 1 && <Pagination pagesCount={10} activePage={activePage} />}
+      {pagesCount > 1 && (
+        <Pagination
+          pagesCount={pagesCount}
+          activePage={activePage}
+          urlPath={`categories/${router.query.pages?.[0]}`}
+        />
+      )}
     </>
   );
 }
 
 export const getStaticPaths = async () => {
-  const { posts } = getAllPosts();
+  const { posts } = getPosts();
 
   const allCategories = getAllCategories(posts);
 
   let paths: any[] = [];
 
   for (const category of allCategories) {
-    const filteredPosts = getFilteredPosts(posts, category);
+    const { totalCount } = getFilteredPosts(posts, category);
 
-    const pages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+    const pages = Math.ceil(totalCount / POSTS_PER_PAGE);
+
     paths = [
       ...paths,
       ...Array.from(Array(pages).keys()).map((page) => ({
         params: {
-          category: transformTitleToSlug(category),
-          page: String(page + 1),
+          pages:
+            page > 0
+              ? [transformTitleToSlug(category), "pages", String(page + 1)]
+              : [transformTitleToSlug(category)],
         },
       })),
     ];
@@ -91,24 +105,29 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params }) => {
-  const { page: activePage, category: selectedCategory } = params;
+  const { pages } = params;
+  const [category, _pagesPath = null, activePage = null] = pages;
 
-  const { count, posts } = getAllPosts();
+  const { posts } = getPosts();
 
-  const formattedCategory = transformSlugToTitle(selectedCategory);
-
-  const filteredPosts = getFilteredPosts(posts, formattedCategory);
-
+  const formattedCategory = transformSlugToTitle(category);
+  const offset = ((activePage ?? 1) - 1) * POSTS_PER_PAGE;
+  const { posts: filteredPosts, totalCount } = getFilteredPosts(
+    posts,
+    formattedCategory,
+    POSTS_PER_PAGE,
+    offset
+  );
   const transformedPosts = await transformPosts(filteredPosts);
 
-  const pagesCount = Math.ceil(count / POSTS_PER_PAGE);
+  const pagesCount = Math.ceil(totalCount / POSTS_PER_PAGE);
 
   return {
     props: {
       activePage,
       category: formattedCategory,
       key: generateUniqueKey(),
-      posts: transformedPosts.filter((post) => post), // Remove later - stupid DS_Store issue
+      posts: transformedPosts,
       pagesCount,
     },
   };

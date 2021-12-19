@@ -1,7 +1,4 @@
-import styles from "./posts-component.module.css";
 import PostItem from "./post-item";
-
-import { POSTS_PER_PAGE } from "constants/posts";
 
 type Props = {
   posts: {

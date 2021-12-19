@@ -102,11 +102,11 @@ npx pod-install
 
 // Embed code snippet
 
-### Considerations / Limitations<a name="considerations/limitations"></a>
+### Considerations / Limitations<a name="considerations"></a>
 
 While this swipe list works like a charm with small lists, it doesn't fare especially well with big ones. Here are some tips to work around this limitation:
 Make sure to optimise your <FlatList /> which is what <SwipeListView /> uses under the hood.
 Design animations to use only non-layout properties like transform and opacity which are supported by the native driver. In our example, we could have animated the scaleY property of the row instead of the height to have it disappear.
 react-native-swipe-list-view uses React Native's Animated library and the creator has no intention of migrating to Reanimated. Find an alternative swipe list package based on Reanimated in order to offload animation and event handling logic off of the JavaScript thread and onto the UI thread.
 
-Hope you enjoyed the read :)
+Hope you enjoyed the read :)

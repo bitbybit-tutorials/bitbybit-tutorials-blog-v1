@@ -1,14 +1,14 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Head from "next/head";
 
-import { POSTS_PER_PAGE } from "constants/posts";
+import { POSTS_PER_PAGE } from "modules/posts/constants/posts-constants";
 import Grid from "modules/grid";
 import { siteTitle } from "modules/layout/layout";
-import { getAllPosts, generateAllPostsJson } from "modules/posts/get-posts";
+import { getPosts } from "modules/posts/utils/posts-server-utils";
 import Pagination from "modules/pagination";
 import Posts from "modules/posts/posts-component";
 import Section from "modules/section";
-import { transformPosts } from "utils/posts-server";
+import { transformPosts } from "modules/posts/utils/posts-server-utils";
 
 type Props = {
   activePage: number;
@@ -33,17 +33,25 @@ export default function PostsPage({ activePage, posts, pagesCount }: Props) {
           </Grid>
         }
       />
-      <Pagination pagesCount={10} activePage={activePage} />
+      {pagesCount > 1 && (
+        <Pagination
+          pagesCount={pagesCount}
+          activePage={activePage}
+          urlPath="posts"
+        />
+      )}
     </>
   );
 }
 
 export const getStaticPaths = async () => {
-  const { count } = getAllPosts();
+  const { totalCount } = getPosts();
 
-  const pages = Math.ceil(count / POSTS_PER_PAGE);
+  const pages = Math.ceil(totalCount / POSTS_PER_PAGE);
   const paths = Array.from(Array(pages).keys()).map((page) => ({
-    params: { page: String(page + 1) },
+    params: {
+      pages: page > 0 ? ["pages", String(page + 1)] : [],
+    },
   }));
 
   return {
@@ -53,12 +61,15 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params }) => {
-  const { page: activePage } = params;
-  const { posts, count } = getAllPosts();
+  const { pages = [] } = params;
+  const [_pagesPath = null, activePage = null] = pages;
+
+  const offset = ((activePage ?? 1) - 1) * POSTS_PER_PAGE;
+  const { posts, totalCount } = getPosts(POSTS_PER_PAGE, offset);
 
   const transformedAllPosts = await transformPosts(posts);
 
-  const pagesCount = Math.ceil(count / POSTS_PER_PAGE);
+  const pagesCount = Math.ceil(totalCount / POSTS_PER_PAGE);
 
   return {
     props: {

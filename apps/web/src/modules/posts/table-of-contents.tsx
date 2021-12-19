@@ -14,7 +14,7 @@ export default function TableOfContents({ items }: Props) {
       <ul className={styles.navList}>
         {items.map((item, index) => (
           <li className={styles.item} key={`${index}`}>
-            <Link href={`#${item.id}`}>
+            <Link href={item.anchor}>
               <a>
                 <span>{item.title}</span>
               </a>

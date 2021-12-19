@@ -12,18 +12,22 @@ import CustomLink from "modules/custom-link";
 import Grid from "modules/grid";
 import Image from "modules/image";
 import {
-  getAllPosts,
+  getPosts,
   getAllPostSlugs,
   getPost,
   generatePostJson,
-} from "modules/posts/get-posts";
+} from "modules/posts/utils/posts-server-utils";
 import TableOfContents from "modules/posts/table-of-contents";
 import { SearchContext } from "modules/search/search-context";
 import Section from "modules/section";
 import utilStyles from "styles/utils.module.css";
-import { transformPosts } from "utils/posts-server";
+import { transformPosts } from "modules/posts/utils/posts-server-utils";
 import { generateUniqueKey } from "utils/unique-key";
-import { getFilteredPosts } from "utils/posts-client-safe";
+import { getFilteredPosts } from "modules/posts/utils/posts-client-safe-utils";
+import {
+  generateToc,
+  scrapeHeadings,
+} from "modules/posts/utils/posts-server-utils";
 import Posts from "modules/posts/posts-component";
 
 // Custom components/renderers to pass to MDX.
@@ -42,17 +46,20 @@ const components = {
 type Props = {
   post: {
     data: Post;
-    source: {
-      compiledSource: string;
-    };
+    compiledSource: string;
+    rawSource: string;
     slug: string;
+    toc: { anchor: string; level: number; title: string }[];
   };
   relatedPosts: Post[];
 };
 
 export default function Post({ post, relatedPosts }: Props) {
   const { toggleSearch } = useContext(SearchContext);
-  const { date, id, title, toc } = post.data;
+  const {
+    toc,
+    data: { date, id, title },
+  } = post;
 
   useEffect(() => {
     toggleSearch(false);
@@ -69,7 +76,7 @@ export default function Post({ post, relatedPosts }: Props) {
             <h1 className={utilStyles.headingXl}>{title}</h1>
             <div className={utilStyles.lightText}>{date}</div>
             <div>
-              <MDXRemote {...post.source} components={components} />
+              <MDXRemote {...post.compiledSource} components={components} />
             </div>
           </article>
           <aside className={styles.sidebar}>
@@ -106,13 +113,19 @@ export const getStaticProps = async ({ params }) => {
   const post = await getPost(slug);
   generatePostJson(post);
 
-  const { posts } = getAllPosts();
+  const { posts } = getPosts();
   const filteredPosts = getFilteredPosts(posts, post.data.category, 3);
   const transformedPosts = await transformPosts(filteredPosts);
 
+  const headingsArr = scrapeHeadings(post.rawSource);
+  const toc = generateToc(headingsArr);
+
   return {
     props: {
-      post,
+      post: {
+        ...post,
+        toc,
+      },
       key: generateUniqueKey(), // Key is needed here to reset state when navigating between different dynamic routes
       relatedPosts: transformedPosts,
     },

@@ -5,8 +5,6 @@ export function transformSlugToTitle(slug: string) {
     return CATEGORIES_MAP[slug];
   }
 
-  if (!slug) return;
-
   return slug
     .split("-")
     .map((word) => `${word.charAt(0).toUpperCase()}${word.slice(1)}`)
@@ -14,5 +12,8 @@ export function transformSlugToTitle(slug: string) {
 }
 
 export function transformTitleToSlug(title: string) {
-  return title?.replace(/\s+/g, "-").toLowerCase();
+  return (
+    Object.keys(CATEGORIES_MAP).find((key) => CATEGORIES_MAP[key] === title) ??
+    title?.replace(/\s+/g, "-").toLowerCase()
+  );
 }

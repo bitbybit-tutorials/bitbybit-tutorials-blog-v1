@@ -5,10 +5,10 @@ import styles from "./index.module.css";
 import Grid from "modules/grid";
 import { siteTitle } from "modules/layout/layout";
 import {
-  getAllPosts,
+  getPosts,
   generateAllPostsJson,
   getLatestPosts,
-} from "modules/posts/get-posts";
+} from "modules/posts/utils/posts-server-utils";
 import Posts from "modules/posts/posts-component";
 import Section from "modules/section";
 import { getStorageImageRef, getImageUrl } from "services/firebase";
@@ -54,7 +54,7 @@ export const getStaticProps: GetStaticProps = async (_context) => {
   );
 
   // Generate all posts JSON
-  const { posts: allPosts } = getAllPosts();
+  const { posts: allPosts } = getPosts();
   const transformedAllPosts = await Promise.all(
     allPosts.map(async (post) => {
       // Get image urls

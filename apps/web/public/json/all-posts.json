@@ -1,6 +1,5 @@
 [
   {
-    "slug": "post-1",
     "category": [
       "JavaScript",
       "React",
@@ -38,11 +37,11 @@
       }
     ],
     "type": "post",
+    "slug": "post-1",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-10",
     "category": [
       "JavaScript",
       "React",
@@ -53,11 +52,11 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 10",
     "type": "post",
+    "slug": "post-10",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-11",
     "category": [
       "JavaScript",
       "React",
@@ -68,11 +67,11 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 11",
     "type": "post",
+    "slug": "post-11",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-12",
     "category": [
       "JavaScript",
       "React",
@@ -83,11 +82,11 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 12",
     "type": "post",
+    "slug": "post-12",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-13",
     "category": [
       "JavaScript",
       "React",
@@ -98,11 +97,11 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 13",
     "type": "post",
+    "slug": "post-13",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-14",
     "category": [
       "JavaScript",
       "React",
@@ -113,11 +112,11 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 14",
     "type": "post",
+    "slug": "post-14",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-15",
     "category": [
       "JavaScript",
       "React",
@@ -128,11 +127,11 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 15",
     "type": "post",
+    "slug": "post-15",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-16",
     "category": [
       "JavaScript",
       "React",
@@ -143,11 +142,11 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 16",
     "type": "post",
+    "slug": "post-16",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-17",
     "category": [
       "JavaScript",
       "React",
@@ -158,11 +157,11 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 17",
     "type": "post",
+    "slug": "post-17",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-18",
     "category": [
       "JavaScript",
       "React",
@@ -173,11 +172,11 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 18",
     "type": "post",
+    "slug": "post-18",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-19",
     "category": [
       "JavaScript",
       "React",
@@ -188,14 +187,14 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 19",
     "type": "post",
+    "slug": "post-19",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-2",
     "category": [
       "JavaScript",
-      "Next"
+      "Next.js"
     ],
     "created": "02-12-2021",
     "id": 2,
@@ -203,11 +202,11 @@
     "lastUpdated": "03-12-2021",
     "title": "Implementing a WhatsApp like Swipe to Delete Feature in React Native",
     "type": "post",
+    "slug": "post-2",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-20",
     "category": [
       "JavaScript",
       "React",
@@ -218,11 +217,11 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 20",
     "type": "post",
+    "slug": "post-20",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-21",
     "category": [
       "JavaScript",
       "React",
@@ -233,11 +232,11 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 21",
     "type": "post",
+    "slug": "post-21",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-22",
     "category": [
       "JavaScript",
       "React",
@@ -248,11 +247,11 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 22",
     "type": "post",
+    "slug": "post-22",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-23",
     "category": [
       "JavaScript",
       "React",
@@ -263,11 +262,11 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 23",
     "type": "post",
+    "slug": "post-23",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-24",
     "category": [
       "JavaScript",
       "React",
@@ -278,11 +277,11 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 24",
     "type": "post",
+    "slug": "post-24",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-25",
     "category": [
       "JavaScript",
       "React",
@@ -293,11 +292,11 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 25",
     "type": "post",
+    "slug": "post-25",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-26",
     "category": [
       "JavaScript",
       "React",
@@ -308,11 +307,11 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 26",
     "type": "post",
+    "slug": "post-26",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-27",
     "category": [
       "JavaScript",
       "React",
@@ -323,11 +322,11 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 27",
     "type": "post",
+    "slug": "post-27",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-28",
     "category": [
       "JavaScript",
       "React",
@@ -338,11 +337,11 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 28",
     "type": "post",
+    "slug": "post-28",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-29",
     "category": [
       "JavaScript",
       "React",
@@ -353,11 +352,11 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 29",
     "type": "post",
+    "slug": "post-29",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-3",
     "category": [
       "JavaScript",
       "React Native"
@@ -368,11 +367,11 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 3",
     "type": "post",
+    "slug": "post-3",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-30",
     "category": [
       "JavaScript",
       "React",
@@ -383,11 +382,11 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 30",
     "type": "post",
+    "slug": "post-30",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-31",
     "category": [
       "JavaScript",
       "React",
@@ -398,11 +397,11 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 31",
     "type": "post",
+    "slug": "post-31",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-32",
     "category": [
       "JavaScript",
       "React",
@@ -413,11 +412,11 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 32",
     "type": "post",
+    "slug": "post-32",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-4",
     "category": [
       "JavaScript",
       "React Native"
@@ -428,11 +427,11 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 4",
     "type": "post",
+    "slug": "post-4",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-5",
     "category": [
       "JavaScript",
       "React",
@@ -443,11 +442,11 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 5",
     "type": "post",
+    "slug": "post-5",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-6",
     "category": [
       "JavaScript",
       "React",
@@ -458,11 +457,11 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 6",
     "type": "post",
+    "slug": "post-6",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-7",
     "category": [
       "JavaScript",
       "React",
@@ -473,11 +472,11 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 7",
     "type": "post",
+    "slug": "post-7",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-8",
     "category": [
       "JavaScript",
       "React",
@@ -488,11 +487,11 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 8",
     "type": "post",
+    "slug": "post-8",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   },
   {
-    "slug": "post-9",
     "category": [
       "JavaScript",
       "React",
@@ -503,6 +502,7 @@
     "lastUpdated": "02-12-2021",
     "title": "Post 9",
     "type": "post",
+    "slug": "post-9",
     "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
     "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
   }
