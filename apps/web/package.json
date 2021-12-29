@@ -5,10 +5,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pull-dev-env-var": "vercel env pull .env.development.local"
   },
   "dependencies": {
-    "date-fns": "^2.26.0",
+    "dayjs": "^1.10.7",
     "firebase": "^9.6.0",
     "gray-matter": "^4.0.3",
     "next": "12.0.4",

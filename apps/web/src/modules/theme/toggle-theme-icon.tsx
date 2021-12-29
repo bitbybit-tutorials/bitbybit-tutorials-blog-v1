@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { IoMoonSharp, IoSunnySharp } from "react-icons/io5";
 
 import styles from "./toggle-theme-icon.module.css";
-import utilStyles from "styles/utils.module.css";
+import typographyStyles from "styles/typography.module.css";
 
 export default function ToggleThemeIcon() {
   const [activeTheme, setActiveTheme] = useState(document.body.dataset.theme);
@@ -17,11 +17,11 @@ export default function ToggleThemeIcon() {
   }, [activeTheme]);
 
   return (
-    <span className={utilStyles.icon} onClick={toggleActiveTheme}>
+    <span className={typographyStyles.icon} onClick={toggleActiveTheme}>
       {activeTheme === "dark" ? (
-        <IoSunnySharp size={"1.8rem"} color="grey" />
+        <IoSunnySharp size={"1.6em"} color="grey" />
       ) : (
-        <IoMoonSharp size={"1.8rem"} color="grey" />
+        <IoMoonSharp size={"1.6rem"} color="grey" />
       )}
     </span>
   );
