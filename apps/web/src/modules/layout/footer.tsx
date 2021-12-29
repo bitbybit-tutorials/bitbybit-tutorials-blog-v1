@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import styles from "./footer.module.css";
-import utilStyles from "styles/utils.module.css";
+import typographyStyles from "styles/typography.module.css";
 
 export default function Footer() {
   const LOGO_SIZE = "40px";
@@ -30,7 +30,7 @@ export default function Footer() {
             <Image
               priority
               src="/images/snoopy.png"
-              className={utilStyles.borderCircle}
+              // className={utilStyles.borderCircle}
               height={LOGO_SIZE}
               width={LOGO_SIZE}
               alt={"logo"}

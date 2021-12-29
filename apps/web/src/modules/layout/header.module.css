@@ -18,14 +18,15 @@
 }
 
 .item {
-  width: 2rem;
-  font-size: var(--font-size-large);
+  min-width: 1rem;
 }
+
 .item:not(:last-of-type) {
   margin-right: 1.5rem;
 }
-.item:first-of-type {
-  margin-right: 1.5rem;
+
+li.item:hover {
+  color: var(--color-text-primary);
 }
 
 .itemFlex {

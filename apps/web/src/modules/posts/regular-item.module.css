@@ -1,13 +1,16 @@
 .container {
+  background-color: var(--color-bg-secondary);
   border-radius: 6px;
   overflow: hidden;
-  background-color: var(--color-bg-primary);
-  transition: background 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
 }
 
 .imageContainer {
 }
 
 .description {
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

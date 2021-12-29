@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "./post-item.module.css";
 import Image from "modules/image";
 import Tags from "modules/tags/tags";
-import utilStyles from "styles/utils.module.css";
+import typographyStyles from "styles/typography.module.css";
 import Date from "utils/formatDate";
 import fallbackImage from "../../../public/images/snoopy.png";
 import image from "next/image";
@@ -38,7 +38,7 @@ export default function PostItem({ post }: Props) {
           </a>
         </Link>
         <br />
-        <small className={utilStyles.lightText}>{created}</small>
+        <small className={typographyStyles.lightText}>{created}</small>
         <Tags names={category} />
       </div>
     </div>

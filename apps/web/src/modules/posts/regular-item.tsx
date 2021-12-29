@@ -3,8 +3,10 @@ import Link from "next/link";
 import styles from "./regular-item.module.css";
 import Image from "modules/image";
 import Tags from "modules/tags/tags";
-import utilStyles from "styles/utils.module.css";
-import fallbackImage from "../../../public/images/snoopy.png";
+import typographyStyles from "styles/typography.module.css";
+import utilStyles from "styles/util.module.css";
+import { formatDate } from "utils/formatDate";
+import fallbackImage from "public/images/snoopy.png";
 
 type Props = {
   post: Post;
@@ -27,13 +29,16 @@ export default function PostItem({ post }: Props) {
         </a>
       </Link>
       <div className={styles.description}>
-        <Link href={`/posts/${slug}`}>
-          <a>
-            <h2>{title}</h2>
-          </a>
-        </Link>
-        <br />
-        <small className={utilStyles.lightText}>{created}</small>
+        <div className={utilStyles.marginBottomSm}>
+          <Link href={`/posts/${slug}`}>
+            <a>
+              <h2 className={typographyStyles.headingLg}>{title}</h2>
+            </a>
+          </Link>
+          <span className={typographyStyles.textMedium}>
+            {formatDate(created)}
+          </span>
+        </div>
         <Tags names={category} />
       </div>
     </div>

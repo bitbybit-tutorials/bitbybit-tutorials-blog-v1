@@ -7,6 +7,7 @@ import styles from "./header.module.css";
 import Logo from "modules/logo";
 import { SearchContext } from "modules/search/search-context";
 import SearchIcon from "modules/search/search-icon";
+import typographyStyles from "styles/typography.module.css";
 
 const ToggleThemeIcon = dynamic(
   () => import("modules/theme/toggle-theme-icon"),
@@ -29,7 +30,9 @@ export default function Header() {
           <li className={styles.item}>
             <Logo onClick={closeSearch} />
           </li>
-          <li className={`${styles.item} ${styles.itemFlex}`}>
+          <li
+            className={`${typographyStyles.textBig} ${styles.item} ${styles.itemFlex}`}
+          >
             <Link href={`/posts`}>
               <a>Posts</a>
             </Link>
