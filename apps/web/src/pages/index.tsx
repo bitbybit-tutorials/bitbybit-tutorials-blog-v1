@@ -13,6 +13,7 @@ import Posts from "modules/posts/posts-component";
 import Section from "modules/section";
 import { getStorageImageRef, getImageUrl } from "services/firebase";
 import { createPlaceholderImage } from "utils/image";
+import { initialiseFirebaseService } from "services/firebase/initialise-service";
 
 export default function Home({
   posts,
@@ -35,6 +36,8 @@ export default function Home({
 }
 
 export const getStaticProps: GetStaticProps = async (_context) => {
+  initialiseFirebaseService();
+
   const posts = getLatestPosts(10);
 
   const transformedPosts = await Promise.all(

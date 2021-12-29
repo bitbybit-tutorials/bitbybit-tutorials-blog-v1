@@ -3,32 +3,32 @@ import { useContext, useEffect } from "react";
 import { GetStaticProps, GetStaticPaths } from "next";
 import dynamic from "next/dynamic";
 import Head from "next/head";
-import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote";
+import { useRouter } from "next/router";
 
 import styles from "./slug.module.css";
-import Date from "utils/formatDate";
+import Breadcrumbs from "modules/breadcrumbs";
 import CustomLink from "modules/custom-link";
 import Grid from "modules/grid";
 import Image from "modules/image";
-import {
-  getPosts,
-  getAllPostSlugs,
-  getPost,
-  generatePostJson,
-} from "modules/posts/utils/posts-server-utils";
+import Posts from "modules/posts/posts-component";
 import TableOfContents from "modules/posts/table-of-contents";
-import { SearchContext } from "modules/search/search-context";
-import Section from "modules/section";
-import utilStyles from "styles/utils.module.css";
-import { transformPosts } from "modules/posts/utils/posts-server-utils";
-import { generateUniqueKey } from "utils/unique-key";
 import { getFilteredPosts } from "modules/posts/utils/posts-client-safe-utils";
 import {
+  generatePostJson,
   generateToc,
+  getAllPostSlugs,
+  getPost,
+  getPosts,
   scrapeHeadings,
+  transformPosts,
 } from "modules/posts/utils/posts-server-utils";
-import Posts from "modules/posts/posts-component";
+import { SearchContext } from "modules/search/search-context";
+import Section from "modules/section";
+import typographyStyles from "styles/typography.module.css";
+import utilStyles from "styles/util.module.css";
+import { formatDate } from "utils/formatDate";
+import { generateUniqueKey } from "utils/unique-key";
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
@@ -61,8 +61,20 @@ export default function Post({ post, relatedPosts }: Props) {
     data: { date, id, title },
   } = post;
 
+  const links = [
+    {
+      route: "/",
+      title: "Home",
+    },
+    {
+      route: "/posts",
+      title: "Posts",
+    },
+  ];
+
   useEffect(() => {
     toggleSearch(false);
+    document.documentElement.classList.add("smoothScroll");
   }, []);
 
   return (
@@ -71,10 +83,11 @@ export default function Post({ post, relatedPosts }: Props) {
         <title>{title}</title>
       </Head>
       <div className={styles.container}>
-        <div className={styles.flexWrapper}>
+        <Breadcrumbs links={links} />
+        <div className={`${styles.flexWrapper} ${utilStyles.marginTopMd}`}>
           <article className={styles.main}>
-            <h1 className={utilStyles.headingXl}>{title}</h1>
-            <div className={utilStyles.lightText}>{date}</div>
+            <h1 className={typographyStyles.headingXl}>{title}</h1>
+            <span className={typographyStyles.textBig}>{formatDate(date)}</span>
             <div>
               <MDXRemote {...post.compiledSource} components={components} />
             </div>
@@ -114,7 +127,11 @@ export const getStaticProps = async ({ params }) => {
   generatePostJson(post);
 
   const { posts } = getPosts();
-  const filteredPosts = getFilteredPosts(posts, post.data.category, 3);
+  const { posts: filteredPosts } = getFilteredPosts(
+    posts,
+    post.data.category,
+    3
+  );
   const transformedPosts = await transformPosts(filteredPosts);
 
   const headingsArr = scrapeHeadings(post.rawSource);

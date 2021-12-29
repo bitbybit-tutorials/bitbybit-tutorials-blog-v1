@@ -2,7 +2,8 @@ import Image from "next/image";
 
 type Props = {
   alt: string;
-  blurDataURL: string;
+  blurDataURL?: string;
+  className?: string;
   height?: number;
   priority?: boolean;
   src: string;
@@ -12,6 +13,7 @@ type Props = {
 export default function CustomImage({
   alt,
   blurDataURL,
+  className,
   height,
   priority,
   src,
@@ -21,9 +23,10 @@ export default function CustomImage({
     <Image
       alt={alt ?? "image"}
       blurDataURL={blurDataURL}
+      className={className}
       height={height ?? "100%"}
       layout="responsive"
-      placeholder="blur"
+      placeholder={blurDataURL ? "blur" : undefined}
       objectFit="cover"
       priority={priority ?? false}
       src={src}

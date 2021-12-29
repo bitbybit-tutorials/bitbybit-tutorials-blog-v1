@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 
 import type { AppProps } from "next/app";
 
-import { initialiseFirebaseService } from "services/firebase/initialise-service";
 import Layout from "modules/layout/layout";
 import { PostsContext } from "modules/posts/posts-context";
 import { SearchContext } from "modules/search/search-context";
@@ -11,7 +10,6 @@ import allPostsJson from "../../public/json/all-posts.json";
 import "styles/globals.css";
 
 // Initialise all services
-initialiseFirebaseService();
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const [showSearch, setShowSearch] = useState(false);

@@ -13,13 +13,9 @@ export const getFilteredPosts = (
     post.category?.some((c) => categoryArr.includes(c))
   );
 
-  const sliceOffset = offset ? offset - 1 : 0;
+  const sliceOffset = offset ?? 0;
 
-  const sliceLimit = limit
-    ? offset === 0
-      ? sliceOffset + limit
-      : sliceOffset + limit + 1
-    : undefined;
+  const sliceLimit = limit ? sliceOffset + limit : undefined;
 
   const slice = filteredPosts.slice(sliceOffset, sliceLimit);
 

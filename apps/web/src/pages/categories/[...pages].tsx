@@ -16,9 +16,10 @@ import Pagination from "modules/pagination";
 import Posts from "modules/posts/posts-component";
 import Section from "modules/section";
 import { SearchContext } from "modules/search/search-context";
-import utilStyles from "styles/utils.module.css";
+import typographyStyles from "styles/typography.module.css";
 import { transformPosts } from "modules/posts/utils/posts-server-utils";
 import { getFilteredPosts } from "modules/posts/utils/posts-client-safe-utils";
+import { initialiseFirebaseService } from "services/firebase/initialise-service";
 import {
   transformSlugToTitle,
   transformTitleToSlug,
@@ -105,6 +106,8 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params }) => {
+  initialiseFirebaseService();
+
   const { pages } = params;
   const [category, _pagesPath = null, activePage = null] = pages;
 

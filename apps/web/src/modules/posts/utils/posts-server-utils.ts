@@ -76,12 +76,12 @@ export const getPosts = (limit?: number, offset?: number): any => {
     a.date > b.date ? 1 : b.date > a.date ? -1 : 0
   );
 
-  const sliceOffset = offset ? offset - 1 : 0;
+  const sliceOffset = offset ?? 0;
 
   const sliceLimit = limit
-    ? offset === 0
-      ? sliceOffset + limit
-      : sliceOffset + limit + 1
+    ? sliceOffset === 0
+      ? sliceOffset + limit + 1
+      : sliceOffset + limit
     : undefined;
 
   const slice = sortedPosts.slice(sliceOffset, sliceLimit);

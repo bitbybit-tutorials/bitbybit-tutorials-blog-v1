@@ -1,3 +1,7 @@
+.smoothSroll {
+  scroll-behavior: smooth;
+}
+
 .container {
   padding: 1rem 0;
 }
