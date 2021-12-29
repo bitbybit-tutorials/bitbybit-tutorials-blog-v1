@@ -1,13 +1,12 @@
 import { useState, useEffect, useContext, useRef } from "react";
 
 import Link from "next/link";
-import useSWR from "swr";
 
 import styles from "./search-modal.module.css";
 import { PostsContext } from "modules/posts/posts-context";
 import { SearchContext } from "modules/search/search-context";
 import Tags from "modules/tags/tags";
-import utilStyles from "styles/utils.module.css";
+import typographyStyles from "styles/typography.module.css";
 import { getAllCategories } from "modules/posts/utils/posts-client-safe-utils";
 
 type Props = {
@@ -72,23 +71,36 @@ export default function SearchModal({ show }: Props) {
       />
       {search && (
         <ul className={styles.searchList}>
-          {searchResults.map((post: any, index) => (
-            <li className={styles.listItem} key={`${index}`}>
-              <Link href={`/posts/${post.slug}`}>
-                <a className={styles.listItemLink} onClick={onRedirect}>
-                  <h3>{post.title}</h3>
-                  <h4>{post.date}</h4>
-                  <Tags names={post.category} />
-                </a>
-              </Link>
+          {searchResults.length > 0 ? (
+            searchResults.map((post: any, index) => (
+              <li className={styles.listItem} key={`${index}`}>
+                <Link href={`/posts/${post.slug}`}>
+                  <a className={styles.listItemLink} onClick={onRedirect}>
+                    <h3
+                      className={`${typographyStyles.headingBig} ${styles.title}`}
+                    >
+                      {post.title}
+                    </h3>
+                    <Tags
+                      className={styles.tagsStyle}
+                      names={post.category}
+                      size="small"
+                    />
+                  </a>
+                </Link>
+              </li>
+            ))
+          ) : (
+            <li className={styles.noResults}>
+              <h3 className={typographyStyles.headingLg}>No results found</h3>
             </li>
-          ))}
+          )}
         </ul>
       )}
       {!search && (
-        <div className={`${utilStyles.marginVerticalXl} ${styles.tags}`}>
+        <div className={styles.tagsContainer}>
           <Tags
-            color={"#e1567c"}
+            className={styles.tagsStyle}
             names={getAllCategories(posts)}
             size="medium"
           />

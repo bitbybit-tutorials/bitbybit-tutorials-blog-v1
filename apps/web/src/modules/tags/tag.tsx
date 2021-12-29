@@ -3,10 +3,17 @@ import React from "react";
 import Link from "next/link";
 
 import styles from "./tag.module.css";
+import typographyStyles from "styles/typography.module.css";
 import { transformTitleToSlug } from "utils/text-transform";
 
+const TAG_STYLE_MAP: { [key: string]: string } = {
+  big: `${typographyStyles.textBig} ${styles.big}`,
+  medium: `${typographyStyles.textMd} ${styles.medium}`,
+  small: `${typographyStyles.textSm} ${styles.small}`,
+};
+
 type TagProps = {
-  color?: string;
+  className?: string;
   disable?: boolean;
   name: string;
   onClick?: () => void;
@@ -32,14 +39,15 @@ const Wrapper = ({ children, disable, name }: WrapperProps) => {
   );
 };
 
-function Tag({ color, name, onClick, size }: Partial<TagProps>) {
+function Tag({ className, name, onClick, size }: Partial<TagProps>) {
   const clickHandler = () => onClick?.();
 
   return (
     <span
-      className={`${styles.container} ${styles[size ?? "small"]}`}
+      className={`${styles.container} ${
+        TAG_STYLE_MAP[size ?? "small"]
+      } ${className}`}
       onClick={clickHandler}
-      style={{ backgroundColor: color }}
     >
       {name}
     </span>
