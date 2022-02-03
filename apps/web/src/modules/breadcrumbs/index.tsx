@@ -1,9 +1,18 @@
 import { RiArrowDropRightLine } from "react-icons/ri";
+import { css } from "@emotion/react";
 
 import Link from "next/link";
 
-import styles from "./index.module.css";
-import typographyStyles from "styles/typography.module.css";
+import { TYPOGRAPHY_CLASSES_MAP } from "modules/theme/styles/typography";
+
+const styles = css`
+  display: flex;
+
+  li {
+    display: flex;
+    align-items: center;
+  }
+`;
 
 type Props = {
   links: { title: string; route: string }[];
@@ -11,11 +20,15 @@ type Props = {
 
 export default function Breadcrumbs({ links }: Props) {
   return (
-    <ul className={styles.list}>
+    <ul css={styles}>
       {links.map((link, index) => (
-        <li key={`${index}`} className={styles.item}>
+        <li key={`${index}`}>
           <Link href={link.route}>
-            <a className={typographyStyles.textBig}>{link.title}</a>
+            <a
+              className={`${TYPOGRAPHY_CLASSES_MAP.textMd} ${TYPOGRAPHY_CLASSES_MAP.link}`}
+            >
+              {link.title}
+            </a>
           </Link>
           {index < links.length - 1 && (
             <RiArrowDropRightLine size={"1.6rem"} color="grey" />

@@ -6,10 +6,9 @@ import Grid from "modules/grid";
 import { siteTitle } from "modules/layout/layout";
 import { getPosts } from "modules/posts/utils/posts-server-utils";
 import Pagination from "modules/pagination";
-import Posts from "modules/posts/posts-component";
+import PostsList from "modules/posts/posts-list";
 import Section from "modules/section";
 import { transformPosts } from "modules/posts/utils/posts-server-utils";
-import { initialiseFirebaseService } from "services/firebase/initialise-service";
 
 type Props = {
   activePage: number;
@@ -26,7 +25,7 @@ export default function PostsPage({ activePage, posts, pagesCount }: Props) {
       <Section
         content={
           <Grid numColumns={3}>
-            <Posts
+            <PostsList
               offset={(activePage - 1) * POSTS_PER_PAGE}
               posts={posts}
               type="regular"
@@ -61,16 +60,12 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async ({ params }) => {
-  initialiseFirebaseService();
-
-  const { pages = [] } = params;
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const { pages = [] }: any = params;
   const [_pagesPath = null, activePage = null] = pages;
 
   const offset = ((activePage ?? 1) - 1) * POSTS_PER_PAGE;
 
-  console.log("offset");
-  console.log(offset);
   const { posts, totalCount } = getPosts(POSTS_PER_PAGE, offset);
 
   const transformedAllPosts = await transformPosts(posts);

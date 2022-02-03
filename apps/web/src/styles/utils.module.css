@@ -1,0 +1,81 @@
+.colorInherit {
+  color: inherit;
+}
+
+.listItem {
+  margin: 0 0 1.25rem;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.marginVerticalXl {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.marginBottomSm {
+  margin-bottom: 0.6rem;
+}
+.marginBottomMd {
+  margin-bottom: 1.5rem;
+}
+
+.marginTopMd {
+  margin-top: 1.5rem;
+}
+
+.containerRound {
+  border-radius: 8px;
+}
+
+.containerCircle {
+  border-radius: 50%;
+}
+
+.imageRegular {
+  height: 45vw;
+  min-height: 8rem;
+  position: relative;
+}
+
+.imageFullWidth {
+  border-radius: 8px;
+  position: relative;
+  height: 45vw;
+  min-height: 8rem;
+}
+
+@media only screen and (min-width: 576px) {
+  .imageRegular {
+    height: 28vw;
+  }
+  .imageFullWidth {
+    height: 28vw;
+    width: 35vw;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .imageRegular {
+    height: 25vw;
+  }
+  .imageFullWidth {
+    align-self: center;
+    height: 22vw;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .imageFullWidth {
+    height: 20vw;
+    width: 25vw;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .imageRegular {
+    height: 18vw;
+  }
+}

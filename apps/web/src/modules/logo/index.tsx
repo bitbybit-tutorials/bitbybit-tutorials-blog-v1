@@ -1,26 +1,26 @@
+import { css } from "@emotion/react";
+
 import Image from "modules/image";
 import Link from "next/link";
 
-import utilStyles from "styles/util.module.css";
+const styles = css`
+  height: 2.25rem;
+  width: 12rem;
+  position: relative;
+  margin: 0;
+`;
 
 type Props = {
   onClick?: () => void;
 };
 
 export default function Logo({ onClick }: Props) {
-  const LOGO_SIZE = 80;
-
   return (
     <Link href="/">
       <a onClick={onClick}>
-        <Image
-          priority
-          src="/images/logo.jpeg"
-          className={utilStyles.containerCircle}
-          height={LOGO_SIZE}
-          width={LOGO_SIZE}
-          alt={"logo"}
-        />
+        <div css={styles}>
+          <Image priority src="/images/logo.png" alt={"logo"} />
+        </div>
       </a>
     </Link>
   );

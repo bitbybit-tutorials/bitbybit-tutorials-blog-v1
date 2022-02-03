@@ -1,15 +1,20 @@
 import { useState, useEffect } from "react";
 import { IoMoonSharp, IoSunnySharp } from "react-icons/io5";
+import { css } from "@emotion/react";
 
-import styles from "./toggle-theme-icon.module.css";
-import typographyStyles from "styles/typography.module.css";
+import { THEMES_MAP, THEME } from "./theme";
+
+const styles = css`
+  color: ${THEME.nav.icon.default};
+  &:hover {
+    color: ${THEME.nav.icon.hover};
+  }
+`;
 
 export default function ToggleThemeIcon() {
   const [activeTheme, setActiveTheme] = useState(document.body.dataset.theme);
-
-  const toggleActiveTheme = () => {
-    setActiveTheme(activeTheme === "light" ? "dark" : "light");
-  };
+  const inactiveTheme =
+    activeTheme === THEMES_MAP.light ? THEMES_MAP.dark : THEMES_MAP.light;
 
   useEffect(() => {
     document.body.dataset.theme = activeTheme;
@@ -17,11 +22,15 @@ export default function ToggleThemeIcon() {
   }, [activeTheme]);
 
   return (
-    <span className={typographyStyles.icon} onClick={toggleActiveTheme}>
-      {activeTheme === "dark" ? (
-        <IoSunnySharp size={"1.6em"} color="grey" />
+    <span
+      className="icon"
+      css={styles}
+      onClick={() => setActiveTheme(inactiveTheme)}
+    >
+      {activeTheme === THEMES_MAP.light ? (
+        <IoSunnySharp size={"1.6em"} />
       ) : (
-        <IoMoonSharp size={"1.6rem"} color="grey" />
+        <IoMoonSharp size={"1.6rem"} />
       )}
     </span>
   );

@@ -1,41 +1,85 @@
+import { css, useTheme } from "@emotion/react";
+
 import Link from "next/link";
 
-import styles from "./regular-item.module.css";
 import Image from "modules/image";
 import Tags from "modules/tags/tags";
-import typographyStyles from "styles/typography.module.css";
-import utilStyles from "styles/util.module.css";
+import { BREAKPOINTS } from "modules/theme/constants/breakpoints";
+import { TYPOGRAPHY_CLASSES_MAP } from "modules/theme/styles/typography";
+import { THEME } from "modules/theme/theme";
+import utilsStyles from "styles/utils.module.css";
 import { formatDate } from "utils/formatDate";
 import fallbackImage from "public/images/snoopy.png";
+
+const styles = css`
+  background-color: ${THEME.post.background};
+  border-radius: 6px;
+  min-width: 12rem;
+  overflow: hidden;
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .date {
+    display: inline-block;
+    margin-bottom: 1.8rem;
+    margin-top: 0.5rem;
+  }
+
+  @media only screen and (min-width: ${BREAKPOINTS.small}) {
+    display: flex;
+
+    .link {
+      width: 35vw;
+    }
+    .description {
+      flex: 1;
+    }
+  }
+
+  @media only screen and (min-width: ${BREAKPOINTS.medium}) {
+    flex-direction: column;
+
+    .link {
+      width: auto;
+    }
+  }
+`;
 
 type Props = {
   post: Post;
 };
 
 export default function PostItem({ post }: Props) {
-  const { blurDataURL, category, created, imageSrc, slug, title } = post;
+  const { blurDataUrl, category, created, imageUrl, slug, title } = post;
+  const theme = useTheme() as Theme;
 
   return (
-    <div className={styles.container}>
+    <div css={styles}>
       <Link href={`/posts/${slug}`}>
-        <a>
-          <div className={styles.imageContainer}>
+        <a className="link">
+          <div className={utilsStyles.imageRegular}>
             <Image
-              blurDataURL={blurDataURL}
+              blurDataUrl={blurDataUrl}
               alt={title}
-              src={imageSrc ?? fallbackImage}
+              src={imageUrl ?? fallbackImage}
             />
           </div>
         </a>
       </Link>
-      <div className={styles.description}>
-        <div className={utilStyles.marginBottomSm}>
+      <div className="description">
+        <div>
           <Link href={`/posts/${slug}`}>
             <a>
-              <h2 className={typographyStyles.headingLg}>{title}</h2>
+              <h2 className={TYPOGRAPHY_CLASSES_MAP.headingBig}>{title}</h2>
             </a>
           </Link>
-          <span className={typographyStyles.textMedium}>
+          <span
+            className={`${TYPOGRAPHY_CLASSES_MAP.textSm} ${TYPOGRAPHY_CLASSES_MAP.textSecondary} date`}
+          >
             {formatDate(created)}
           </span>
         </div>

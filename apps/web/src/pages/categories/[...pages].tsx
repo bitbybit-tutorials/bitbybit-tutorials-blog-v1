@@ -7,19 +7,14 @@ import { useRouter } from "next/router";
 import { POSTS_PER_PAGE } from "modules/posts/constants/posts-constants";
 import Grid from "modules/grid";
 import { siteTitle } from "modules/layout/layout";
-import {
-  getPosts,
-  generateAllPostsJson,
-} from "modules/posts/utils/posts-server-utils";
+import { getPosts } from "modules/posts/utils/posts-server-utils";
 import { getAllCategories } from "modules/posts/utils/posts-client-safe-utils";
 import Pagination from "modules/pagination";
-import Posts from "modules/posts/posts-component";
+import PostsList from "modules/posts/posts-list";
 import Section from "modules/section";
 import { SearchContext } from "modules/search/search-context";
-import typographyStyles from "styles/typography.module.css";
 import { transformPosts } from "modules/posts/utils/posts-server-utils";
 import { getFilteredPosts } from "modules/posts/utils/posts-client-safe-utils";
-import { initialiseFirebaseService } from "services/firebase/initialise-service";
 import {
   transformSlugToTitle,
   transformTitleToSlug,
@@ -55,7 +50,7 @@ export default function Categories({
         title={category}
         content={
           <Grid numColumns={3}>
-            <Posts
+            <PostsList
               offset={(activePage - 1) * POSTS_PER_PAGE}
               posts={posts}
               type="regular"
@@ -105,10 +100,8 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async ({ params }) => {
-  initialiseFirebaseService();
-
-  const { pages } = params;
+export const getStaticProps: GetStaticProps = async (context) => {
+  const { pages }: any = context.params;
   const [category, _pagesPath = null, activePage = null] = pages;
 
   const { posts } = getPosts();

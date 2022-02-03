@@ -1,10 +1,21 @@
-import { ref, getStorage, getDownloadURL } from "firebase/storage";
+import {
+  ref,
+  getStorage,
+  getDownloadURL,
+  StorageReference,
+} from "firebase/storage";
+
+import { firebaseApp } from "./initialise-service";
+
+const storage = getStorage(firebaseApp);
 
 // Create a storage reference from our storage service
-export const getStorageImageRef = (path: string) => ref(getStorage(), path);
+export const getStorageImageRef = (path: string) => ref(storage, path);
 
 // Download image
-export const getImageUrl = async (storageRef): Promise<string | any> => {
+export const getImageUrl = async (
+  storageRef: StorageReference
+): Promise<string | any> => {
   try {
     return await getDownloadURL(storageRef);
   } catch (error: any) {

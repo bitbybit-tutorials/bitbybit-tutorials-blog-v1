@@ -1,1 +1,1 @@
-import { firebaseService } from "./firebase";
+export {};

@@ -1,33 +1,29 @@
 ---
+abstract: "In this post we'll explore how we can create a smooth, responsive and intuitive swipe to delete in React Native and what challenges and limitations we might face."
 category: ["JavaScript", "React", "React Native"]
 created: "01-12-2021"
 id: 1
+isPublished: true
 image: "test.png"
 lastUpdated: "02-12-2021"
+seoTitle: "Something more descriptive"
 title: "Implementing a WhatsApp like Swipe to Delete Feature in React Native"
-toc:
-  [
-    { title: "Goal", id: "goal" },
-    { title: "Objectives", id: "objectives" },
-    { title: "Implementation", id: "implementation" },
-    { title: "Animations", id: "animations" },
-    { title: "Final Touch", id: "final-touch" },
-    { title: "Considerations & Limitations", id: "considerations/limitations" },
-  ]
 type: "post"
+updates: [{ year: "02-12-2021", note: "We updated this and that" }]
 ---
 
-![Demo image](https://cdn-images-1.medium.com/max/1600/1*cVvWIFk7sN3x0YwnFki7Iw.gif)
+Swipe to delete has become a very common feature present in most mobile apps
+today. **If done correctly, it feels like all's right with the world. If not, it
+can turn into a nightmarish experience for the user resulting in countless
+recipes and playlist songs unexpectedly disappearing into the ether.**
 
-Swipe to delete has become a very common feature present in most mobile apps today. If done correctly, it feels like all's right with the world. If not, it can turn into a nightmarish experience for the user resulting in countless recipes and playlist songs unexpectedly disappearing into the ether.
-
-### Goal<a name="goal"></a>
+## Goal
 
 In this post we'll explore how we can create a smooth, responsive and intuitive swipe to delete in React Native and what challenges and limitations we might face. I am a big fan of the WhatsApp implementation so we'll aim for a similar look and feel.
 
-### Objectives<a name="objectives"></a>
+## Objectives
 
-In order to deliver on our promise, here's some of the criteria our design needs to meet.
+In order to deliver on our promise, here's some of the criteria our design needs to meet:
 
 - Provide visual and sensory cues to signal to users what action is taking place and what the consequences of following through on that action will be
 - Allow users to change their mind mid swipe and cancel the action
@@ -36,77 +32,476 @@ In order to deliver on our promise, here's some of the criteria our design needs
 
 Here is what our end product will look like:
 
-// Figure out way to embed youtube video
+<iframe
+  className="youtube-iframe"
+  src="https://www.youtube.com/embed/toYJtzowkU8"
+  frameBorder="0"
+  allowFullScreen
+></iframe>
 
-### Implementation<a name="implementation"></a>
+## Implementation
 
-We'll be using a third-party library called react-native-swipe-list-view which gives us a Swipe List component in conjunction with React Native's Animated API for more granular control over our animations.
-You can find the complete example on Github.
+We'll be using a third-party library called [react-native-swipe-list-view](https://github.com/jemise111/react-native-swipe-list-view) which gives us a Swipe List component in conjunction with **React Native's [Animated API](https://reactnative.dev/docs/animated)** for more granular control over our animations.
+
+**You can find the complete example on [Github](https://github.com/bitbybit-tutorials/react-native-swipe-to-delete).**
+
 If you prefer a longer video format check out this video:
+
+<iframe
+  className="youtube-iframe"
+  src="https://www.youtube.com/embed/1y_B4tBezQQ"
+  frameBorder="0"
+  allowFullScreen
+></iframe>
 
 Let's create a new React Native project and install the library.
 
-```
+```js command-line
 npx react-native init swipeToDelete
 cd swipeToDelete
 npx react-native run-ios
+
 npm i react-native-swipe-list-view
 npx pod-install
 ```
 
-We'll import out <SwipeListView /> component and generate some dummy list data to pass to the data prop. The view also requires a renderItem and renderHiddenItem props to render a front row and a hidden row which is revealed when the user swipes and contains our action buttons. We'll pass a function to each prop which accepts 2 parameters - rowData and rowMap and returns a React element. rowData as the name suggests is the extracted data for an individual row from the data array we passed earlier where as rowMap is an object that looks like this
+We'll import our `<SwipeListView />` component and generate some dummy list data to pass to the data prop. The view also requires a `renderItem` and `renderHiddenItem` props to render a front row and a hidden row which is revealed when the user swipes and contains our action buttons. We'll pass a function to each prop which accepts 2 parameters - `rowData` and `rowMap` and returns a React element. `rowData` as the name suggests is the extracted data for an individual row from the data array we passed earlier where as `rowMap` is an object that looks like this
 
 ```
 {
-row_key_1: ref_to_row_1,
-row_key_2: ref_to_row_2
+  row_key_1: ref_to_row_1,
+  row_key_2: ref_to_row_2
 }
 ```
 
-and contains a reference to the row which can be used to access helpful methods like closeRow to swipe a row closed programatically. The row key is the same key we are passing through our data array or if one is not defined, it will use the key generated by the keyExtractor prop.
+and contains a reference to the row which can be used to access helpful methods like `closeRow` to swipe a row closed programatically. The row key is the same key we are passing through our data array or if one is not defined, it will use the key generated by the `keyExtractor` prop.
 
-// Embed code snippet
+```js App.js
+import React, { useState } from "react";
+import { SafeAreaView, StyleSheet } from "react-native";
+import { SwipeListView } from "react-native-swipe-list-view";
 
-We are also adding the disableRightSwipe prop to disable swiping from left to right for simplicity sake and setting the rightOpenValue prop to -120 which is the translate value for the front row along the x-axis when the row is opened. The value will always be negative since we want to shift the front row to the left to reveal the hidden row on the right side.
-Next, we'll add the <VisibleItem /> and <HiddenItemWithActions /> components which are returned from the renderItem and renderHiddenItem functions. They are responsible for rendering the content of the front and back row. They can also react to changes in the swipe state and show that some action has been activated, e.g. expand the delete button to full width of the row. To enable this behaviour we also need to set some props to configure these actions.
+const COLORS = {
+  red: "#cc0000",
+  green: "#4cA64c",
+  blue: "#4c4cff",
+  white: "#fff",
+  grey: "#ddd",
+};
+
+const App = () => {
+  const [list, setList] = useState(
+    [...new Array(20)].map((_, i) => ({
+      key: `${i}`,
+      text: `This is list item ${i}`,
+    }))
+  );
+
+  const renderItem = (rowData, rowMap) => (
+    <VisibleItem rowData={rowData} rowMap={rowMap} />
+  );
+
+  const renderHiddenItem = (rowData, rowMap) => (
+    <HiddenItemWithActions rowData={rowData} rowMap={rowMap} />
+  );
+
+  return (
+    <SafeAreaView style={styles.container}>
+      <SwipeListView
+        data={list}
+        renderItem={renderItem}
+        renderHiddenItem={renderHiddenItem}
+        disableRightSwipe
+        rightOpenValue={-120}
+      />
+    </SafeAreaView>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: COLORS.white,
+  },
+});
+
+export default App;
+```
+
+We are also adding the `disableRightSwipe` prop to disable swiping from left to right for simplicity sake and setting the `rightOpenValue` prop to -120 which is the translate value for the front row along the x-axis when the row is opened. The value will always be negative since we want to shift the front row to the left to reveal the hidden row on the right side.
+
+Next, we'll add the `<VisibleItem />` and `<HiddenItemWithActions />` components which are returned from the `renderItem` and `renderHiddenItem` functions. They are responsible for rendering the content of the front and back row. They can also react to changes in the swipe state and show that some action has been activated, e.g. expand the delete button to full width of the row. To enable this behaviour we also need to set some props to configure these actions.
+
 We'll need some icons too.
 
-```
+```js command-line
 npm i react-native-svg
 npx pod-install
 npm i react-native-eva-icons
 ```
 
-// Embed code snippet
+```js App.js
+// ...
+import {
+  // ...
+  Text,
+  View,
+  TouchableWithoutFeedback,
+  useWindowDimensions,
+} from "react-native";
+import { Icon } from "react-native-eva-icons";
+// ...
 
-We are utilising the rightActivationValue prop as an indicator to signify to the user that an important action is able to take place should they decide to proceed. Once the swipe value exceeds the rightActivationValue it will fire off the onRightActionStatusChange function and activate the rightActionActivated value which is another prop we can pass to the hidden row component and make use of to animate the delete button expanding to the full width of the row or contacting to its initial width if the action is cancelled.
-The swipeGestureEnded prop takes a function which is called when the user has ended their swipe gesture and can be used to animate the row being deleted and to provide confirmation of the successful completion of the action. The rightActionValue is the translateX value to which the row will be shifted after the gesture is released which in our case is the whole width of the screen so that the front row disappears completely. The swipeToOpenPercent / swipeToClosePercent props are the percentage of the rightOpenValue the user needs to swipe past to trigger the row opening / closing.
-We are also setting the useNativeDriver prop to false because we'll be animating layout properties that are not supported by the native driver such as the height and width of the row.
+const VisibleItem = (props) => {
+  const { rowData } = props;
 
-### Animations<a name="animations"></a>
+  return (
+    <View style={[styles.rowFront, (height: 60)]}>
+      <Text>{rowData.item.text}</Text>
+    </View>
+  );
+};
 
-In order to animate the rows and buttons we need to do a refactor of the visible and hidden component and wrap some of the content with animatable components. We'll create a list to store the animated values for the row height and the delete button width for all rows. We'll also want to animate the translateX property of the buttons to create a smooth in and out of view transition. For that purpose we can make use of another prop passed to the hidden component called swipeAnimatedValue which gives us direct access to the swipe row translateX animated value. We can interpolate that value to get the transition just the way we want it.
+const HiddenItemWithActions = (props) => {
+  const { rightActionActivated, swipeAnimatedValue, rowData } = props;
 
-// Embed code snippet
+  return (
+    <View style={styles.rowBack}>
+      <TouchableWithoutFeedback onPress={() => console.log("close row")}>
+        <View
+          style={[
+            styles.backBtn,
+            styles.backRightBtn,
+            styles.backRightBtnLeft,
+            {
+              width: 60,
+            },
+          ]}
+        >
+          <View style={styles.backBtnInner}>
+            <Icon
+              name="arrow-back-outline"
+              fill="#fff"
+              width={26}
+              height={26}
+            />
+            <Text style={styles.backBtnText}>Right</Text>
+          </View>
+        </View>
+      </TouchableWithoutFeedback>
+      <TouchableWithoutFeedback onPress={() => console.log("delete row")}>
+        <View
+          style={[
+            styles.backBtn,
+            styles.backRightBtn,
+            styles.backRightBtnRight,
+            {
+              width: 60,
+            },
+          ]}
+        >
+          <View style={styles.backBtnInner}>
+            <Icon name="trash-2-outline" fill="#fff" width={26} height={26} />
+            <Text style={styles.backBtnText}>Delete</Text>
+          </View>
+        </View>
+      </TouchableWithoutFeedback>
+    </View>
+  );
+};
 
-When the swipe gesture is released if the translateX swipe value exceeds the rightActivationValue (< -200) the row will be shifted to our rightActionValue and disappear from the viewport. We'll also use the Animated.timing() API to animate the width of the delete button to fill the screen width and the row height to 0. We'll pass a callback function to the timing method which will remove the respective item from the list immediately after the animation runs making the whole row disappear completely.
+const App = () => {
+  // ...
+  const { width: screenWidth } = useWindowDimensions();
 
-### Final Touch<a name="final-touch"></a>
+  const onRightActionStatusChange = (rowKey) => {
+    console.log("on right action status change");
+  };
+
+  const swipeGestureEnded = (rowKey, data) => {
+    console.log("on swipe gesture ended");
+  };
+
+  return (
+    <SafeAreaView style={styles.container}>
+      <SwipeListView
+        data={list}
+        renderItem={renderItem}
+        renderHiddenItem={renderHiddenItem}
+        disableRightSwipe
+        rightOpenValue={-120}
+        stopRightSwipe={-201}
+        rightActivationValue={-200}
+        rightActionValue={-screenWidth}
+        onRightActionStatusChange={onRightActionStatusChange}
+        swipeGestureEnded={swipeGestureEnded}
+        swipeToOpenPercent={10}
+        swipeToClosePercent={10}
+        useNativeDriver={false}
+      />
+    </SafeAreaView>
+  );
+};
+
+const styles = StyleSheet.create({
+  // ...
+  rowFront: {
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: COLORS.white,
+    borderBottomColor: COLORS.grey,
+    borderBottomWidth: 1,
+  },
+  rowBack: {
+    height: 60,
+  },
+  backBtn: {
+    position: "absolute",
+    bottom: 0,
+    top: 0,
+    justifyContent: "center",
+  },
+  backRightBtn: {},
+  backRightBtnLeft: {
+    right: 60,
+    backgroundColor: COLORS.blue,
+  },
+  backRightBtnRight: {
+    right: 0,
+    backgroundColor: COLORS.red,
+  },
+  backBtnInner: {
+    alignItems: "center",
+  },
+  backBtnText: {
+    color: COLORS.white,
+    marginTop: 2,
+  },
+});
+```
+
+We are utilising the `rightActivationValue` prop as an indicator to signify to the user that an important action is able to take place should they decide to proceed. Once the swipe value exceeds the `rightActivationValue` it will fire off the `onRightActionStatusChange` function and activate the `rightActionActivated` value which is another prop we can pass to the hidden row component and make use of to animate the delete button expanding to the full width of the row or contacting to its initial width if the action is cancelled.
+
+The `swipeGestureEnded` prop takes a function which is called when the user has ended their swipe gesture and can be used to animate the row being deleted and to provide confirmation of the successful completion of the action. The `rightActionValue` is the translateX value to which the row will be shifted after the gesture is released which in our case is the whole width of the screen so that the front row disappears completely. The `swipeToOpenPercent / swipeToClosePercent` props are the percentage of the `rightOpenValue` the user needs to swipe past to trigger the row opening / closing.
+
+We are also setting the `useNativeDriver` prop to false because we'll be animating layout properties that are not supported by the native driver such as the height and width of the row.
+
+## Animations
+
+In order to animate the rows and buttons we need to do a refactor of the visible and hidden component and wrap some of the content with animatable components. We'll create a list to store the animated values for the row height and the delete button width for all rows. We'll also want to animate the translateX property of the buttons to create a smooth in and out of view transition. For that purpose we can make use of another prop passed to the hidden component called `swipeAnimatedValue` which gives us direct access to the swipe row translateX animated value. We can interpolate that value to get the transition just the way we want it.
+
+```js App.js
+import {
+  // ...
+  Animated,
+} from "react-native";
+// ....
+
+const rowAnimatedValues = {};
+Array(20)
+  .fill("")
+  .forEach((_, i) => {
+    rowAnimatedValues[`${i}`] = {
+      rowHeight: new Animated.Value(60),
+      deleteBtnWidth: new Animated.Value(100),
+    };
+  });
+
+const VisibleItem = (props) => {
+  // ...
+  const rowKey = rowData.item.key;
+
+  return (
+    <Animated.View
+      style={[
+        styles.rowFront,
+        {
+          height: rowAnimatedValues[rowKey].rowHeight,
+        },
+      ]}
+    >
+      <Text>{rowData.item.text}</Text>
+    </Animated.View>
+  );
+};
+
+const HiddenItemWithActions = (props) => {
+  // ...
+  const rowKey = rowData.item.key;
+
+  if (rightActionActivated) {
+    Animated.timing(rowAnimatedValues[rowKey].deleteBtnWidth, {
+      toValue: Math.abs(swipeAnimatedValue.__getValue()),
+      duration: 250,
+      useNativeDriver: false,
+    }).start();
+  } else {
+    Animated.timing(rowAnimatedValues[rowKey].deleteBtnWidth, {
+      toValue: 100,
+      duration: 250,
+      useNativeDriver: false,
+    }).start();
+  }
+
+  return (
+    <View style={styles.rowBack}>
+      <TouchableWithoutFeedback onPress={() => console.log("close row")}>
+        <Animated.View
+          style={[
+            styles.backBtn,
+            styles.backRightBtn,
+            styles.backRightBtnLeft,
+            {
+              width: 100,
+              transform: [
+                {
+                  translateX: swipeAnimatedValue.interpolate({
+                    inputRange: [-200, -120, 0],
+                    outputRange: [-100, -20, 100],
+                    extrapolate: "clamp",
+                  }),
+                },
+              ],
+            },
+          ]}
+        >
+          <View style={styles.backBtnInner}>
+            <Icon
+              name="arrow-back-outline"
+              fill="#fff"
+              width={26}
+              height={26}
+            />
+            <Text style={styles.backBtnText}>Right</Text>
+          </View>
+        </Animated.View>
+      </TouchableWithoutFeedback>
+      <TouchableWithoutFeedback onPress={() => console.log("delete row")}>
+        <Animated.View
+          style={[
+            styles.backBtn,
+            styles.backRightBtn,
+            styles.backRightBtnRight,
+            {
+              width: rowAnimatedValues[rowKey].deleteBtnWidth,
+              transform: [
+                {
+                  translateX: swipeAnimatedValue.interpolate({
+                    inputRange: [-200, -120, 0],
+                    outputRange: [0, 40, 100],
+                    extrapolate: "clamp",
+                  }),
+                },
+              ],
+            },
+          ]}
+        >
+          <View style={styles.backBtnInner}>
+            <Icon name="trash-2-outline" fill="#fff" width={26} height={26} />
+            <Text style={styles.backBtnText}>Delete</Text>
+          </View>
+        </Animated.View>
+      </TouchableWithoutFeedback>
+    </View>
+  );
+};
+
+const App = () => {
+  // ...
+  const deleteRow = (rowKey) => {
+    const newData = list.filter((item) => item.key !== rowKey);
+    setList(newData);
+  };
+
+  const swipeGestureEnded = (rowKey, data) => {
+    if (data.translateX < -200) {
+      Animated.timing(rowAnimatedValues[rowKey].deleteBtnWidth, {
+        toValue: screenWidth,
+        duration: 200,
+        useNativeDriver: false,
+      }).start();
+      Animated.timing(rowAnimatedValues[rowKey].rowHeight, {
+        toValue: 0,
+        delay: 200,
+        duration: 200,
+        useNativeDriver: false,
+      }).start(() => deleteRow(rowKey));
+    }
+  };
+  // ...
+};
+
+const styles = StyleSheet.create({
+  // ...
+  rowBack: {
+    // ...
+    alignItems: "center",
+    backgroundColor: COLORS.white,
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  // ...
+  backRightBtn: {
+    right: 0,
+    alignItems: "flex-start",
+    paddingLeft: 12,
+  },
+  backRightBtnLeft: {
+    backgroundColor: COLORS.blue,
+  },
+  backRightBtnRight: {
+    backgroundColor: COLORS.red,
+  },
+  // ...
+});
+```
+
+When the swipe gesture is released if the translateX swipe value exceeds the `rightActivationValue` (< -200) the row will be shifted to our `rightActionValue` and disappear from the viewport. We'll also use the `Animated.timing()` API to animate the width of the delete button to fill the screen width and the row height to 0. We'll pass a callback function to the timing method which will remove the respective item from the list immediately after the animation runs making the whole row disappear completely.
+
+## Final Touch
 
 For the cherry on top, we'll provide some haptic feedback the moment the user swipes past the activation value to drive home the message that something important is taking place.
 
-```
+```js command-line
 npm i react-native-haptic-feedback
 npx pod-install
 ```
 
-// Embed code snippet
+```js App.js
+// ...
+import ReactNativeHapticFeedback from "react-native-haptic-feedback";
 
-### Considerations / Limitations<a name="considerations"></a>
+// ...
+const options = {
+  enableVibrateFallback: true,
+  ignoreAndroidSystemSettings: false
+};
+
+// ...
+const HiddenItemWithActions = props => {
+  // ...
+  if (rightActionActivated) {
+    ReactNativeHapticFeedback.trigger('impactLight', hapticFeedbackOptions);
+    Animated.timing(rowAnimatedValues[rowKey].deleteBtnWidth, {
+      toValue: Math.abs(swipeAnimatedValue.__getValue()),
+      duration: 250,
+      useNativeDriver: false,
+    }).start();
+  } else {
+    Animated.timing(rowAnimatedValues[rowKey].deleteBtnWidth, {
+      toValue: 100,
+      duration: 250,
+      useNativeDriver: false,
+    }).start();
+  }
+// ...
+```
+
+## Considerations
 
 While this swipe list works like a charm with small lists, it doesn't fare especially well with big ones. Here are some tips to work around this limitation:
-Make sure to optimise your <FlatList /> which is what <SwipeListView /> uses under the hood.
-Design animations to use only non-layout properties like transform and opacity which are supported by the native driver. In our example, we could have animated the scaleY property of the row instead of the height to have it disappear.
-react-native-swipe-list-view uses React Native's Animated library and the creator has no intention of migrating to Reanimated. Find an alternative swipe list package based on Reanimated in order to offload animation and event handling logic off of the JavaScript thread and onto the UI thread.
+
+- Make sure to [optimise your FlatList](https://reactnative.dev/docs/optimizing-flatlist-configuration) which is what `<SwipeListView />` uses under the hood.
+- Design animations to use only non-layout properties like transform and opacity which are supported by the native driver. In our example, we could have animated the scaleY property of the row instead of the height to have it disappear.
+- `react-native-swipe-list-view` uses React Native's Animated library and the creator has no intention of migrating to Reanimated. Find an alternative swipe list package based on Reanimated in order to offload animation and event handling logic off of the JavaScript thread and onto the UI thread.
 
 Hope you enjoyed the read :)

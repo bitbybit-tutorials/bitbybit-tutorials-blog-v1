@@ -1,10 +1,36 @@
+import { css } from "@emotion/react";
+
 import Head from "next/head";
 
-import Footer from "./footer";
 import Header from "./header";
-import styles from "./layout.module.css";
+import { BREAKPOINTS } from "modules/theme/constants/breakpoints";
 
 export const siteTitle = "Bitbybit Tutorials";
+
+const styles = css`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  .main {
+    flex: 1;
+    padding: 0 1rem 4rem;
+  }
+  @media only screen and (min-width: ${BREAKPOINTS.medium}) {
+    .main {
+      padding: 0 2.5rem;
+    }
+  }
+  @media only screen and (min-width: ${BREAKPOINTS.large}) {
+    .main {
+      padding: 0 8rem;
+    }
+  }
+  @media only screen and (min-width: ${BREAKPOINTS.extraLarge}) {
+    .main {
+      padding: 0 12rem 8rem;
+    }
+  }
+`;
 
 type Props = {
   children: any;
@@ -13,7 +39,7 @@ type Props = {
 
 export default function Layout({ children, home }: Props) {
   return (
-    <div className={styles.container}>
+    <div css={styles}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -30,8 +56,7 @@ export default function Layout({ children, home }: Props) {
         <meta name="twitter:card" content="summary_large_image " />
       </Head>
       <Header />
-      <main className={styles.main}>{children}</main>
-      {/* <Footer /> */}
+      <main className="main">{children}</main>
     </div>
   );
 }

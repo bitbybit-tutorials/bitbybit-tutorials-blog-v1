@@ -1,7 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
-import { FONT_URL } from "constants/fonts";
-
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx);
@@ -10,15 +8,18 @@ class MyDocument extends Document {
 
   render() {
     const setInitialTheme = `
-        function getUserPreference() {
-        if(window.localStorage.getItem('theme')) {
-            return window.localStorage.getItem('theme');
+    (function() {
+      function getInitialTheme() {
+        const persistedThemePreference =  window.localStorage.getItem('theme');
+        if (persistedThemePreference) {
+          return persistedThemePreference;
         }
-        return window.matchMedia('(prefers-color-scheme: dark)').matches
-            ? 'dark'
-            : 'light';
-        }
-        document.body.dataset.theme = getUserPreference();
+        const mql = window.matchMedia('(prefers-color-scheme: dark)');
+        return mql.matches ? 'dark' : 'light'
+      }
+      const initialTheme = getInitialTheme();
+      document.body.dataset.theme = initialTheme;
+    })(); 
     `;
 
     return (

@@ -1,3 +1,3 @@
-export { initialiseFirebaseService } from "./initialise-service";
+export { logEvent } from "./analytics";
 
 export { getStorageImageRef, getImageUrl } from "./storage";

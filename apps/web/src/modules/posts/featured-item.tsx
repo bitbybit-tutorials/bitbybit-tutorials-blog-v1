@@ -1,44 +1,43 @@
+import { css } from "@emotion/react";
+
 import Link from "next/link";
 
-import styles from "./post-item.module.css";
 import Image from "modules/image";
 import Tags from "modules/tags/tags";
-import typographyStyles from "styles/typography.module.css";
-import Date from "utils/formatDate";
+import { TYPOGRAPHY_CLASSES_MAP } from "modules/theme/styles/typography";
 import fallbackImage from "../../../public/images/snoopy.png";
-import image from "next/image";
+
+const styles = css``;
 
 type Props = {
   post: Post;
 };
 
 export default function PostItem({ post }: Props) {
-  const { blurDataURL, category, created, imageSrc, slug, title } = post;
+  const { blurDataUrl, category, created, imageUrl, slug, title } = post;
 
   return (
-    <div className={styles.container}>
+    <div css={styles}>
       <Link href={`/posts/${slug}`}>
         <a>
-          <div className={styles.imageContainer}>
+          <div className="imageContainer">
             <Image
-              blurDataURL={blurDataURL}
+              blurDataUrl={blurDataUrl}
               alt={title}
-              height={268}
               priority
-              src={imageSrc ?? fallbackImage}
-              width={512}
+              src={imageUrl ?? fallbackImage}
             />
           </div>
         </a>
       </Link>
-      <div className={styles.description}>
+      <div className="description">
         <Link href={`/posts/${slug}`}>
           <a>
             <h2>{title}</h2>
           </a>
         </Link>
         <br />
-        <small className={typographyStyles.lightText}>{created}</small>
+        <small className={TYPOGRAPHY_CLASSES_MAP.textSm}>{created}</small>
         <Tags names={category} />
       </div>
     </div>

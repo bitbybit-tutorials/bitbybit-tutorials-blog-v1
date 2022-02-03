@@ -1,17 +1,15 @@
 import { useContext, useEffect } from "react";
+import { css } from "@emotion/react";
 
 import { GetStaticProps, GetStaticPaths } from "next";
-import dynamic from "next/dynamic";
 import Head from "next/head";
-import { MDXRemote } from "next-mdx-remote";
-import { useRouter } from "next/router";
 
-import styles from "./slug.module.css";
 import Breadcrumbs from "modules/breadcrumbs";
-import CustomLink from "modules/custom-link";
 import Grid from "modules/grid";
-import Image from "modules/image";
-import Posts from "modules/posts/posts-component";
+
+import Posts from "modules/posts/posts-list";
+import PostHeader from "modules/posts/post-header";
+import PostBody from "modules/posts/post-body";
 import TableOfContents from "modules/posts/table-of-contents";
 import { getFilteredPosts } from "modules/posts/utils/posts-client-safe-utils";
 import {
@@ -20,46 +18,87 @@ import {
   getAllPostSlugs,
   getPost,
   getPosts,
+  getReadingTime,
   scrapeHeadings,
+  transformPost,
   transformPosts,
 } from "modules/posts/utils/posts-server-utils";
+import { useActiveId } from "modules/posts/posts-hooks";
 import { SearchContext } from "modules/search/search-context";
 import Section from "modules/section";
-import typographyStyles from "styles/typography.module.css";
-import utilStyles from "styles/util.module.css";
-import { formatDate } from "utils/formatDate";
+import utilsStyles from "styles/utils.module.css";
 import { generateUniqueKey } from "utils/unique-key";
+import { BREAKPOINTS } from "modules/theme/constants/breakpoints";
 
-// Custom components/renderers to pass to MDX.
-// Since the MDX files aren't loaded by webpack, they have no knowledge of how
-// to handle import statements. Instead, you must include components in scope here.
-const components = {
-  // a: Link,
-  // Link: Link,
-  // It also works with dynamically imported components, which is especially useful for
-  // conditionally loading components for certain routes. See the notes in README.md for more details
-  image: Image,
-  TestComponent: dynamic(() => import("modules/test-component")),
-  Head,
-};
+const IFRAME_ASPECT_RATIO = 16 / 9;
+
+const styles = css`
+  .flex-wrapper {
+    align-items: flex-start;
+    display: flex;
+    padding-bottom: 3rem;
+  }
+  .article {
+    width: 100%;
+  }
+  .sidebar {
+    display: none;
+    max-height: calc(100vh - 4rem);
+    position: sticky;
+    top: 11.5rem;
+    margin-bottom: 2.5rem;
+    margin-top: 4rem;
+  }
+  .youtube-iframe {
+    width: 100%;
+    height: calc((100vw - 2rem) / ${IFRAME_ASPECT_RATIO});
+  }
+
+  @media only screen and (min-width: ${BREAKPOINTS.medium}) {
+    .youtube-iframe {
+      width: 100%;
+      height: calc((100vw - 5rem) / ${IFRAME_ASPECT_RATIO});
+    }
+  }
+  @media only screen and (min-width: ${BREAKPOINTS.large}) {
+    .article {
+      width: calc(100% - 18.125rem);
+    }
+    .sidebar {
+      display: block;
+      margin-left: 2.5rem;
+    }
+    .youtube-iframe {
+      width: 100%;
+      height: calc(
+        (100vw - 16rem - 4.6875rem - 15.625rem) / ${IFRAME_ASPECT_RATIO}
+      );
+    }
+  }
+  @media only screen and (min-width: ${BREAKPOINTS.extraLarge}) {
+    .article {
+      width: calc(100% - 20.3125rem);
+    }
+    .sidebar {
+      margin-left: 4.6875rem;
+    }
+    .youtube-iframe {
+      width: 100%;
+      height: calc(
+        (100vw - 24rem - 4.6875rem - 15.625rem) / ${IFRAME_ASPECT_RATIO}
+      );
+    }
+  }
+`;
 
 type Props = {
-  post: {
-    data: Post;
-    compiledSource: string;
-    rawSource: string;
-    slug: string;
-    toc: { anchor: string; level: number; title: string }[];
-  };
+  post: Post;
   relatedPosts: Post[];
 };
 
 export default function Post({ post, relatedPosts }: Props) {
   const { toggleSearch } = useContext(SearchContext);
-  const {
-    toc,
-    data: { date, id, title },
-  } = post;
+  const { compiledSource, title, toc } = post;
 
   const links = [
     {
@@ -72,9 +111,17 @@ export default function Post({ post, relatedPosts }: Props) {
     },
   ];
 
+  const ids = toc?.map((item) => item.id) || [];
+  const activeId = useActiveId(ids);
+
   useEffect(() => {
     toggleSearch(false);
-    document.documentElement.classList.add("smoothScroll");
+
+    document.documentElement.classList.add("smooth-scroll");
+
+    return () => {
+      document.documentElement.classList.remove("smooth-scroll");
+    };
   }, []);
 
   return (
@@ -82,19 +129,18 @@ export default function Post({ post, relatedPosts }: Props) {
       <Head>
         <title>{title}</title>
       </Head>
-      <div className={styles.container}>
-        <Breadcrumbs links={links} />
-        <div className={`${styles.flexWrapper} ${utilStyles.marginTopMd}`}>
-          <article className={styles.main}>
-            <h1 className={typographyStyles.headingXl}>{title}</h1>
-            <span className={typographyStyles.textBig}>{formatDate(date)}</span>
-            <div>
-              <MDXRemote {...post.compiledSource} components={components} />
-            </div>
+      <div css={styles}>
+        <div className={`flex-wrapper ${utilsStyles.marginTopMd}`}>
+          <article className="article">
+            <Breadcrumbs links={links} />
+            <PostHeader post={post} />
+            <PostBody compiledSource={compiledSource} />
           </article>
-          <aside className={styles.sidebar}>
-            <TableOfContents items={toc} />
-          </aside>
+          {toc && toc.length > 0 && (
+            <aside className="sidebar">
+              <TableOfContents activeId={activeId} items={toc} />
+            </aside>
+          )}
         </div>
         {relatedPosts.length > 0 && (
           <Section
@@ -120,27 +166,27 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async ({ params }) => {
-  const { slug } = params;
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const { slug }: any = params;
 
   const post = await getPost(slug);
   generatePostJson(post);
+  const transformedPost = await transformPost(post);
 
   const { posts } = getPosts();
-  const { posts: filteredPosts } = getFilteredPosts(
-    posts,
-    post.data.category,
-    3
-  );
+  const { posts: filteredPosts } = getFilteredPosts(posts, post.category, 3);
   const transformedPosts = await transformPosts(filteredPosts);
 
-  const headingsArr = scrapeHeadings(post.rawSource);
+  const headingsArr = scrapeHeadings(post.rawSource || "");
   const toc = generateToc(headingsArr);
+
+  const readingTime = getReadingTime(post.rawSource || "");
 
   return {
     props: {
       post: {
-        ...post,
+        ...transformedPost,
+        readingTime,
         toc,
       },
       key: generateUniqueKey(), // Key is needed here to reset state when navigating between different dynamic routes

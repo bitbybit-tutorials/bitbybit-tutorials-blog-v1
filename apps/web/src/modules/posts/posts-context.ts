@@ -1,6 +1,6 @@
 import React from "react";
 
 // Set default value
-export const PostsContext = React.createContext<{ allPostsJson: any }>({
-  allPostsJson: undefined,
+export const PostsContext = React.createContext<{ posts: Post[] }>({
+  posts: [],
 });

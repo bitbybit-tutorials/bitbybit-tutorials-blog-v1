@@ -1,19 +1,16 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Head from "next/head";
 
-import styles from "./index.module.css";
 import Grid from "modules/grid";
 import { siteTitle } from "modules/layout/layout";
 import {
   getPosts,
   generateAllPostsJson,
   getLatestPosts,
+  transformPosts,
 } from "modules/posts/utils/posts-server-utils";
-import Posts from "modules/posts/posts-component";
+import Posts from "modules/posts/posts-list";
 import Section from "modules/section";
-import { getStorageImageRef, getImageUrl } from "services/firebase";
-import { createPlaceholderImage } from "utils/image";
-import { initialiseFirebaseService } from "services/firebase/initialise-service";
 
 export default function Home({
   posts,
@@ -36,48 +33,18 @@ export default function Home({
 }
 
 export const getStaticProps: GetStaticProps = async (_context) => {
-  initialiseFirebaseService();
+  const posts: PostRaw[] = getLatestPosts(10);
 
-  const posts = getLatestPosts(10);
-
-  const transformedPosts = await Promise.all(
-    posts.map(async (post) => {
-      // Get image urls
-      const storageRef = getStorageImageRef(`posts/test.png`);
-      const url = await getImageUrl(storageRef);
-
-      // Convert image into a low-res image, encoded as Base64 string
-      const base64 = await createPlaceholderImage(url);
-      return {
-        ...post,
-        blurDataURL: base64,
-        imageSrc: url,
-      };
-    })
-  );
+  const transformedLatestPosts = await transformPosts(posts);
 
   // Generate all posts JSON
   const { posts: allPosts } = getPosts();
-  const transformedAllPosts = await Promise.all(
-    allPosts.map(async (post) => {
-      // Get image urls
-      const storageRef = getStorageImageRef(`posts/test.png`);
-      const url = await getImageUrl(storageRef);
-
-      // Convert image into a low-res image, encoded as Base64 string
-      const base64 = await createPlaceholderImage(url);
-      return {
-        ...post,
-        blurDataURL: base64,
-        imageSrc: url,
-      };
-    })
-  );
+  const transformedAllPosts = await transformPosts(allPosts);
   generateAllPostsJson(transformedAllPosts);
 
   return {
     props: {
-      posts: transformedPosts,
+      posts: transformedLatestPosts,
     },
   };
 };

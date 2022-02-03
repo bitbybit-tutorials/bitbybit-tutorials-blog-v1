@@ -1,24 +1,24 @@
+import { css } from "@emotion/react";
+
 import Tag from "./tag";
-import styles from "./tags.module.css";
+
+const listStyles = css`
+  display: flex;
+  flex-wrap: wrap;
+`;
 
 type Props = {
-  className?: string;
+  altStyle?: boolean;
   names: string[];
-  onClick?: () => void;
   size?: "small" | "medium" | "big";
 };
 
-export default function Tags({ className, names, onClick, size }: Props) {
+export default function Tags({ altStyle, names, size }: Props) {
   return (
-    <ul className={styles.list}>
-      {names.map((name, index) => (
+    <ul css={listStyles}>
+      {names?.map((name, index) => (
         <li key={`${index}`}>
-          <Tag
-            className={className}
-            size={size}
-            name={name}
-            onClick={onClick}
-          />
+          <Tag altStyle={altStyle} size={size} name={name} />
         </li>
       ))}
     </ul>

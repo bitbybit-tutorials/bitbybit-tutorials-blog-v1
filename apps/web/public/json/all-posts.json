@@ -1,5 +1,6 @@
 [
   {
+    "abstract": "In this post we'll explore how we can create a smooth, responsive and intuitive swipe to delete in React Native and what challenges and limitations we might face.",
     "category": [
       "JavaScript",
       "React",
@@ -7,39 +8,21 @@
     ],
     "created": "01-12-2021",
     "id": 1,
+    "isPublished": true,
     "image": "test.png",
     "lastUpdated": "02-12-2021",
+    "seoTitle": "Something more descriptive",
     "title": "Implementing a WhatsApp like Swipe to Delete Feature in React Native",
-    "toc": [
+    "type": "post",
+    "updates": [
       {
-        "title": "Goal",
-        "id": "goal"
-      },
-      {
-        "title": "Objectives",
-        "id": "objectives"
-      },
-      {
-        "title": "Implementation",
-        "id": "implementation"
-      },
-      {
-        "title": "Animations",
-        "id": "animations"
-      },
-      {
-        "title": "Final Touch",
-        "id": "final-touch"
-      },
-      {
-        "title": "Considerations & Limitations",
-        "id": "considerations/limitations"
+        "year": "02-12-2021",
+        "note": "We updated this and that"
       }
     ],
-    "type": "post",
     "slug": "post-1",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -53,8 +36,8 @@
     "title": "Post 10",
     "type": "post",
     "slug": "post-10",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -68,8 +51,8 @@
     "title": "Post 11",
     "type": "post",
     "slug": "post-11",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -83,8 +66,8 @@
     "title": "Post 12",
     "type": "post",
     "slug": "post-12",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -98,8 +81,8 @@
     "title": "Post 13",
     "type": "post",
     "slug": "post-13",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -113,8 +96,8 @@
     "title": "Post 14",
     "type": "post",
     "slug": "post-14",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -128,8 +111,8 @@
     "title": "Post 15",
     "type": "post",
     "slug": "post-15",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -143,8 +126,8 @@
     "title": "Post 16",
     "type": "post",
     "slug": "post-16",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -158,8 +141,8 @@
     "title": "Post 17",
     "type": "post",
     "slug": "post-17",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -173,8 +156,8 @@
     "title": "Post 18",
     "type": "post",
     "slug": "post-18",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -188,23 +171,8 @@
     "title": "Post 19",
     "type": "post",
     "slug": "post-19",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
-  },
-  {
-    "category": [
-      "JavaScript",
-      "Next.js"
-    ],
-    "created": "02-12-2021",
-    "id": 2,
-    "image": "test.png",
-    "lastUpdated": "03-12-2021",
-    "title": "Implementing a WhatsApp like Swipe to Delete Feature in React Native",
-    "type": "post",
-    "slug": "post-2",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -218,8 +186,8 @@
     "title": "Post 20",
     "type": "post",
     "slug": "post-20",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -233,8 +201,8 @@
     "title": "Post 21",
     "type": "post",
     "slug": "post-21",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -248,8 +216,8 @@
     "title": "Post 22",
     "type": "post",
     "slug": "post-22",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -263,8 +231,8 @@
     "title": "Post 23",
     "type": "post",
     "slug": "post-23",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -278,8 +246,8 @@
     "title": "Post 24",
     "type": "post",
     "slug": "post-24",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -293,8 +261,8 @@
     "title": "Post 25",
     "type": "post",
     "slug": "post-25",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -308,8 +276,8 @@
     "title": "Post 26",
     "type": "post",
     "slug": "post-26",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -323,8 +291,8 @@
     "title": "Post 27",
     "type": "post",
     "slug": "post-27",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -338,8 +306,8 @@
     "title": "Post 28",
     "type": "post",
     "slug": "post-28",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -353,8 +321,8 @@
     "title": "Post 29",
     "type": "post",
     "slug": "post-29",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -368,8 +336,8 @@
     "title": "Post 3",
     "type": "post",
     "slug": "post-3",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -383,8 +351,8 @@
     "title": "Post 30",
     "type": "post",
     "slug": "post-30",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -398,8 +366,8 @@
     "title": "Post 31",
     "type": "post",
     "slug": "post-31",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -413,8 +381,8 @@
     "title": "Post 32",
     "type": "post",
     "slug": "post-32",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -428,8 +396,8 @@
     "title": "Post 4",
     "type": "post",
     "slug": "post-4",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -443,8 +411,8 @@
     "title": "Post 5",
     "type": "post",
     "slug": "post-5",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -458,8 +426,8 @@
     "title": "Post 6",
     "type": "post",
     "slug": "post-6",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -473,8 +441,8 @@
     "title": "Post 7",
     "type": "post",
     "slug": "post-7",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -488,8 +456,8 @@
     "title": "Post 8",
     "type": "post",
     "slug": "post-8",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
   {
     "category": [
@@ -503,7 +471,22 @@
     "title": "Post 9",
     "type": "post",
     "slug": "post-9",
-    "blurDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVQImWPochf6cW7p/99H/38qYrBhYNhe339q1uL1xUYAvYUNzRBhH6cAAAAASUVORK5CYII=",
-    "imageSrc": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest.png?alt=media&token=4a4258d8-d665-4181-bfea-67895c04f919"
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
+  },
+  {
+    "category": [
+      "JavaScript",
+      "Next.js"
+    ],
+    "created": "02-12-2021",
+    "id": 2,
+    "image": "test.png",
+    "lastUpdated": "03-12-2021",
+    "title": "Implementing a WhatsApp like Swipe to Delete Feature in React Native",
+    "type": "post",
+    "slug": "post-2",
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   }
 ]
