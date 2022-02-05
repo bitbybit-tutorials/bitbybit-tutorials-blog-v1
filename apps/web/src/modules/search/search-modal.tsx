@@ -98,11 +98,6 @@ const styles = css`
       padding: 0 2rem 0.5rem;
       margin-right: 2rem;
     }
-    .close-btn {
-      width: 3rem;
-      height: 3rem;
-      font-size: 1.4rem;
-    }
     .search-list {
       padding-right: 4.5rem;
     }
@@ -124,8 +119,8 @@ const styles = css`
 const closeBtnStyles = css`
   border-radius: 8px;
   cursor: pointer;
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 2rem;
+  height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;

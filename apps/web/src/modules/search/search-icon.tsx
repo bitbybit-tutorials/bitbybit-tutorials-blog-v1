@@ -9,7 +9,11 @@ const styles = css`
   &:hover {
     color: ${THEME.nav.icon.hover};
   }
-  font-size: 1.8rem;
+  font-size: 1.7rem;
+
+  @media only screen and (min-width: ${BREAKPOINTS.small}) {
+    font-size: 1.8rem;
+  }
 `;
 
 type Props = {

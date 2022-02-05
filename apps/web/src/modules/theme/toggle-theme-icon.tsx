@@ -3,13 +3,18 @@ import { IoMoonSharp, IoSunnySharp } from "react-icons/io5";
 import { css } from "@emotion/react";
 
 import { THEMES_MAP, THEME } from "./theme";
+import { BREAKPOINTS } from "./constants/breakpoints";
 
 const styles = css`
   color: ${THEME.nav.icon.default};
   &:hover {
     color: ${THEME.nav.icon.hover};
   }
-  font-size: 1.6rem;
+  font-size: 1.5rem;
+
+  @media only screen and (min-width: ${BREAKPOINTS.small}) {
+    font-size: 1.6rem;
+  }
 `;
 
 export default function ToggleThemeIcon() {

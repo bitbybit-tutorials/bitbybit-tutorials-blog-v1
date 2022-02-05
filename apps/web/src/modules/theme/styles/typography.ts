@@ -68,7 +68,7 @@ export const typographyStyles = css`
   }
   .heading-section {
     color: ${THEME.heading.section};
-    font-size: ${FONT_SIZES.small};
+    font-size: ${FONT_SIZES.extraSmall};
     font-family: ${FONT_NAMES.serifRegular};
     letter-spacing: 2px;
     text-transform: uppercase;

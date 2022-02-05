@@ -7,7 +7,7 @@ const styles = css`
   margin-top: 0.5rem;
 
   .content {
-    margin-top: 1.2rem;
+    margin-top: 1rem;
   }
   @media only screen and (min-width: ${BREAKPOINTS.medium}) {
     margin-top: 1rem;
