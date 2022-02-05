@@ -52,7 +52,7 @@ export const globalStyles = (
       }
       p {
         font-size: ${FONT_SIZES.small};
-        line-height: 1.6rem;
+        line-height: 1.8rem;
         margin-bottom: 1.5rem;
 
         @media only screen and (min-width: ${BREAKPOINTS.medium}) {
@@ -71,8 +71,8 @@ export const globalStyles = (
         text-decoration: none;
       }
       img {
-        // max-width: 100%;
-        // display: block;
+        max-width: 100%;
+        display: block;
       }
       .icon {
         cursor: pointer;

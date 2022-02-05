@@ -33,10 +33,6 @@ export const utilityStyles = css`
     .image-regular {
       height: 28vw;
     }
-    .image-full-width {
-      height: 28vw;
-      width: 35vw;
-    }
   }
 
   @media only screen and (min-width: ${BREAKPOINTS.medium}) {
@@ -46,6 +42,7 @@ export const utilityStyles = css`
     .image-full-width {
       align-self: center;
       height: 22vw;
+      width: 32vw;
     }
   }
 
@@ -58,6 +55,10 @@ export const utilityStyles = css`
 
   @media only screen and (min-width: ${BREAKPOINTS.large}) {
     .image-regular {
+      height: 18vw;
+    }
+    .image-full-width {
+      width: 25vw;
       height: 18vw;
     }
   }

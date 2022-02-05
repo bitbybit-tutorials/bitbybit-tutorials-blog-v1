@@ -31,32 +31,31 @@ const styles = css`
     margin-bottom: 1rem;
   }
 
-  @media only screen and (min-width: ${BREAKPOINTS.small}) {
-    flex-direction: row-reverse;
-  }
-
   @media only screen and (min-width: ${BREAKPOINTS.medium}) {
     flex-direction: row;
     padding: 1.5rem;
 
     .description {
       margin-bottom: 0;
-      margin-right: 1rem;
+      margin-right: 1.5rem;
       padding: 0;
     }
   }
 
   @media only screen and (min-width: ${BREAKPOINTS.big}) {
-    padding: 4rem;
+    padding: 3rem;
 
     .description {
-      margin-right: 3.5rem;
+      margin-right: 2.5rem;
     }
   }
 
   @media only screen and (min-width: ${BREAKPOINTS.large}) {
     .imageContainer {
       width: 30vw;
+    }
+    .description {
+      margin-right: 3.5rem;
     }
   }
 `;
@@ -91,13 +90,18 @@ export default function PostItem({ post }: Props) {
         </div>
         <Tags names={category} size="medium" />
       </div>
+
       <div className={UTILITY_CLASSES_MAP.imageFullWidth}>
-        <Image
-          blurDataUrl={blurDataUrl}
-          alt={title}
-          priority
-          src={imageUrl ?? fallbackImage}
-        />
+        <Link href={`/posts/${slug}`}>
+          <a className="link">
+            <Image
+              blurDataUrl={blurDataUrl}
+              alt={title}
+              priority
+              src={imageUrl ?? fallbackImage}
+            />
+          </a>
+        </Link>
       </div>
     </div>
   );

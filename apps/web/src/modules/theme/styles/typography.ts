@@ -40,7 +40,7 @@ export const typographyStyles = css`
     font-size: ${FONT_SIZES.big};
     line-height: 2rem;
 
-    @media only screen and (min-width: ${BREAKPOINTS.medium}) {
+    @media only screen and (min-width: ${BREAKPOINTS.big}) {
       font-size: ${FONT_SIZES.large};
       line-height: 2.4rem;
     }
