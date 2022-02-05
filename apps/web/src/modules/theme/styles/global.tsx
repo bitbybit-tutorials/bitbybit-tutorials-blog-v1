@@ -27,7 +27,8 @@ export const globalStyles = (
         margin: 0;
         padding: 0;
         letter-spacing: 0.8px;
-        transition: background 0.25s ease-in-out, color 0.25s ease-in-out;
+        transition: background 0.25s ease-in-out, color 0.25s ease-in-out,
+          opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
       }
       *,
       *:after,
@@ -50,13 +51,14 @@ export const globalStyles = (
         line-height: 1.6rem;
       }
       p {
+        font-size: ${FONT_SIZES.small};
         line-height: 1.6rem;
-        font-size: ${FONT_SIZES.medium};
         margin-bottom: 1.5rem;
 
         @media only screen and (min-width: ${BREAKPOINTS.medium}) {
-          margin-bottom: 2.5rem;
+          font-size: ${FONT_SIZES.medium};
           line-height: 2rem;
+          margin-bottom: 2.5rem;
         }
       }
       ul {

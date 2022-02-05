@@ -5,38 +5,38 @@ import { FONT_NAMES, FONT_SIZES } from "../constants/fonts";
 import { THEME } from "../theme";
 
 export const TYPOGRAPHY_CLASSES_MAP = {
-  headingSm: "headingSm",
-  headingMd: "headingMd",
-  headingBig: "headingBig",
-  headingLg: "headingLg",
-  headingXl: "headingXl",
+  headingSm: "heading-sm",
+  headingMd: "heading-md",
+  headingBig: "heading-big",
+  headingLg: "heading-lg",
+  headingXl: "heading-xl",
   link: "link",
-  sectionHeading: "sectionHeading",
-  textExtraSm: "textExtraSm",
-  textSm: "textSm",
-  textMd: "textMd",
-  textBig: "textBig",
-  textPrimary: "textPrimary",
-  textSecondary: "textSecondary",
-  textItalic: "textItalic",
+  headingSection: "heading-section",
+  textExtraSm: "text-extra-sm",
+  textSm: "text-sm",
+  textMd: "text-md",
+  textBig: "text-big",
+  textPrimary: "text-primary",
+  textSecondary: "text-secondary",
+  textItalic: "text-italic",
 };
 
 export const typographyStyles = css`
-  .headingSm {
+  .heading-sm {
     font-size: ${FONT_SIZES.small};
   }
-  .headingMd {
+  .heading-md {
     font-size: ${FONT_SIZES.small};
 
     @media only screen and (min-width: ${BREAKPOINTS.medium}) {
       font-size: ${FONT_SIZES.medium};
     }
   }
-  .headingBig {
+  .heading-big {
     font-size: ${FONT_SIZES.big};
     line-height: 2rem;
   }
-  .headingLg {
+  .heading-lg {
     font-size: ${FONT_SIZES.big};
     line-height: 2rem;
 
@@ -45,7 +45,7 @@ export const typographyStyles = css`
       line-height: 2.4rem;
     }
   }
-  .headingXl {
+  .heading-xl {
     font-size: ${FONT_SIZES.big};
     line-height: 2rem;
 
@@ -66,7 +66,7 @@ export const typographyStyles = css`
       color: ${THEME.link.hover};
     }
   }
-  .sectionHeading {
+  .heading-section {
     color: ${THEME.heading.section};
     font-size: ${FONT_SIZES.small};
     font-family: ${FONT_NAMES.serifRegular};
@@ -77,37 +77,37 @@ export const typographyStyles = css`
       font-size: ${FONT_SIZES.medium};
     }
   }
-  .textExtraSm {
+  .text-extra-sm {
     font-size: ${FONT_SIZES.extraSmall};
   }
-  .textSm {
+  .text-sm {
     font-size: ${FONT_SIZES.extraSmall};
 
     @media only screen and (min-width: ${BREAKPOINTS.medium}) {
       font-size: ${FONT_SIZES.small};
     }
   }
-  .textMd {
+  .text-md {
     font-size: ${FONT_SIZES.small};
 
     @media only screen and (min-width: ${BREAKPOINTS.medium}) {
       font-size: ${FONT_SIZES.medium};
     }
   }
-  .textBig {
+  .text-big {
     font-size: ${FONT_SIZES.medium};
 
     @media only screen and (min-width: ${BREAKPOINTS.medium}) {
       font-size: ${FONT_SIZES.big};
     }
   }
-  .textPrimary {
+  .text-primary {
     color: ${THEME.text.primary};
   }
-  .textSecondary {
+  .text-secondary {
     color: ${THEME.text.secondary};
   }
-  .textItalic {
+  .text-italic {
     font-family: ${FONT_NAMES.sansSerifItalic};
   }
 `;
