@@ -26,7 +26,10 @@ const styles = css`
     min-width: 1rem;
   }
   .item:not(:last-of-type) {
-    margin-right: 1.5rem;
+    margin-right: 1rem;
+  }
+  .item:first-of-type {
+    margin-right: 0.4rem;
   }
   .item-flex {
     flex: 1;
@@ -59,10 +62,18 @@ const styles = css`
       transform: scale(1);
     }
   }
+  @media only screen and (min-width: ${BREAKPOINTS.small}) {
+    .item:first-of-type {
+      margin-right: 1rem;
+    }
+  }
   @media only screen and (min-width: ${BREAKPOINTS.medium}) {
     .nav {
       height: 120px;
       padding: 0 2.5rem;
+    }
+    .item:not(:last-of-type) {
+      margin-right: 1.5rem;
     }
   }
   @media only screen and (min-width: ${BREAKPOINTS.big}) {
