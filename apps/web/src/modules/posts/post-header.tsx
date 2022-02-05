@@ -16,7 +16,7 @@ const styles = css`
   .image-container {
     height: 25rem;
     position: relative;
-    margin: 1.2rem 0;
+    margin: 1.2rem 0 2rem;
   }
   .meta {
     margin: 0.6rem 0;

@@ -6,8 +6,8 @@ import Image from "modules/image";
 import Tags from "modules/tags/tags";
 import { BREAKPOINTS } from "modules/theme/constants/breakpoints";
 import { TYPOGRAPHY_CLASSES_MAP } from "modules/theme/styles/typography";
+import { UTILITY_CLASSES_MAP } from "modules/theme/styles/utilty";
 import { THEME } from "modules/theme/theme";
-import utilsStyles from "styles/utils.module.css";
 import { formatDate } from "utils/formatDate";
 import fallbackImage from "public/images/snoopy.png";
 
@@ -61,7 +61,7 @@ export default function PostItem({ post }: Props) {
     <div css={styles}>
       <Link href={`/posts/${slug}`}>
         <a className="link">
-          <div className={utilsStyles.imageRegular}>
+          <div className={UTILITY_CLASSES_MAP.imageRegular}>
             <Image
               blurDataUrl={blurDataUrl}
               alt={title}

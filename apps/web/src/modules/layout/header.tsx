@@ -46,6 +46,7 @@ const styles = css`
       transform: scale(0);
       width: 100%;
       background-color: ${THEME.nav.link.border};
+      transition: transform 0.25s ease-in-out;
     }
     &:hover {
       color: ${THEME.nav.link.hover};

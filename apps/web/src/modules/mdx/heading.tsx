@@ -6,11 +6,12 @@ import Link from "next/link";
 import { TYPOGRAPHY_CLASSES_MAP } from "modules/theme/styles/typography";
 import { THEME } from "modules/theme/theme";
 import { transformTitleToSlug } from "utils/text-transform";
+import { BREAKPOINTS } from "modules/theme/constants/breakpoints";
 
 const styles = css`
   position: relative;
-  margin-bottom: 1.5rem;
-  margin-top: 3rem;
+  margin-bottom: 0.8rem;
+  margin-top: 1.5rem;
 
   span {
     position: absolute;
@@ -26,6 +27,11 @@ const styles = css`
     position: absolute;
     left: -2.2rem;
     transition: opacity 0.25s ease-in-out;
+  }
+
+  @media only screen and (min-width: ${BREAKPOINTS.medium}) {
+    margin-bottom: 1.5rem;
+    margin-top: 3rem;
   }
 `;
 

@@ -7,9 +7,21 @@ import { THEME } from "modules/theme/theme";
 const styles = css`
   color: ${THEME.link.alt};
   border-bottom: 1.5px solid transparent;
-  transition: border-bottom 0.25s ease-in-out;
-  &:hover {
-    border-bottom: 1.5px solid ${THEME.link.alt};
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    height: 1.5px;
+    width: 100%;
+    background-color: ${THEME.link.alt};
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+  }
+  &:hover:before {
+    opacity: 1;
   }
 `;
 

@@ -3,11 +3,12 @@ import { RiArrowDropRightLine } from "react-icons/ri";
 
 import { FONT_SIZES } from "modules/theme/constants/fonts";
 import { THEME } from "modules/theme/theme";
+import { BREAKPOINTS } from "modules/theme/constants/breakpoints";
 
 const styles = css`
   margin-bottom: 2.5rem;
   margin-top: -1.5rem;
-  padding-left: 1rem;
+
   li {
     font-size: ${FONT_SIZES.medium};
     line-height: 2rem;
@@ -16,6 +17,10 @@ const styles = css`
   .icon {
     position: relative;
     top: 0.95rem;
+  }
+
+  @media only screen and (min-width: ${BREAKPOINTS.medium}) {
+    padding-left: 1rem;
   }
 `;
 

@@ -28,7 +28,7 @@ export default function Section({ content, title }: Props) {
   return (
     <div css={styles}>
       {title && (
-        <h3 className={TYPOGRAPHY_CLASSES_MAP.sectionHeading}>{title}</h3>
+        <h3 className={TYPOGRAPHY_CLASSES_MAP.headingSection}>{title}</h3>
       )}
       <div className="content">{content}</div>
     </div>

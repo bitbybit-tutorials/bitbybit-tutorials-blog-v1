@@ -26,7 +26,6 @@ import {
 import { useActiveId } from "modules/posts/posts-hooks";
 import { SearchContext } from "modules/search/search-context";
 import Section from "modules/section";
-import utilsStyles from "styles/utils.module.css";
 import { generateUniqueKey } from "utils/unique-key";
 import { transformSlugToTitle } from "utils/text-transform";
 import { BREAKPOINTS } from "modules/theme/constants/breakpoints";
@@ -120,7 +119,7 @@ export default function Post({ history, post, relatedPosts }: Props) {
     toggleSearch(false);
 
     // Get category breadcrumb
-    if (history[0].includes("/categories/")) {
+    if (history[0]?.includes("/categories/")) {
       const category = history[0].split("/categories/")[1];
       const newBreadcrumb = {
         route: history[0],
@@ -142,7 +141,7 @@ export default function Post({ history, post, relatedPosts }: Props) {
         <title>{title}</title>
       </Head>
       <div css={styles}>
-        <div className={`flex-wrapper ${utilsStyles.marginTopMd}`}>
+        <div className={`flex-wrapper`}>
           <article className="article">
             <Breadcrumbs links={breadcrumbs} />
             <PostHeader post={post} />
