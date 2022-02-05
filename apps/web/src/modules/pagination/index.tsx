@@ -8,7 +8,7 @@ const styles = css`
   align-items: center;
   display: flex;
   justify-content: center;
-  padding: 40px 10px;
+  padding-top: 3rem;
 `;
 
 const buttonStyles = css`

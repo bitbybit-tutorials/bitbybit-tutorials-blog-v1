@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { css } from "@emotion/react";
 
 import { GetStaticProps, GetStaticPaths } from "next";
@@ -28,6 +28,7 @@ import { SearchContext } from "modules/search/search-context";
 import Section from "modules/section";
 import utilsStyles from "styles/utils.module.css";
 import { generateUniqueKey } from "utils/unique-key";
+import { transformSlugToTitle } from "utils/text-transform";
 import { BREAKPOINTS } from "modules/theme/constants/breakpoints";
 
 const IFRAME_ASPECT_RATIO = 16 / 9;
@@ -92,15 +93,14 @@ const styles = css`
 `;
 
 type Props = {
+  history: string[];
   post: Post;
   relatedPosts: Post[];
 };
 
-export default function Post({ post, relatedPosts }: Props) {
+export default function Post({ history, post, relatedPosts }: Props) {
   const { toggleSearch } = useContext(SearchContext);
-  const { compiledSource, title, toc } = post;
-
-  const links = [
+  const defaultBreadcrumbs = [
     {
       route: "/",
       title: "Home",
@@ -110,12 +110,24 @@ export default function Post({ post, relatedPosts }: Props) {
       title: "Posts",
     },
   ];
+  const { compiledSource, title, toc } = post;
+  const [breadcrumbs, setBreadCrumbs] = useState(defaultBreadcrumbs);
 
   const ids = toc?.map((item) => item.id) || [];
   const activeId = useActiveId(ids);
 
   useEffect(() => {
     toggleSearch(false);
+
+    // Get category breadcrumb
+    if (history[0].includes("/categories/")) {
+      const category = history[0].split("/categories/")[1];
+      const newBreadcrumb = {
+        route: history[0],
+        title: transformSlugToTitle(category),
+      };
+      setBreadCrumbs([...breadcrumbs, newBreadcrumb]);
+    }
 
     document.documentElement.classList.add("smooth-scroll");
 
@@ -132,7 +144,7 @@ export default function Post({ post, relatedPosts }: Props) {
       <div css={styles}>
         <div className={`flex-wrapper ${utilsStyles.marginTopMd}`}>
           <article className="article">
-            <Breadcrumbs links={links} />
+            <Breadcrumbs links={breadcrumbs} />
             <PostHeader post={post} />
             <PostBody compiledSource={compiledSource} />
           </article>

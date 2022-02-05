@@ -34,9 +34,9 @@ const TAG_STYLES_MAP = {
   big: {
     textClassName: TYPOGRAPHY_CLASSES_MAP.textMd,
     css: css`
-      padding: 4px 8px;
-      margin-bottom: 6px;
-      margin-right: 6px;
+      padding: 6px 10px;
+      margin-bottom: 10px;
+      margin-right: 10px;
 
       @media only screen and (min-width: ${BREAKPOINTS.medium}) {
         padding: 8px 14px;

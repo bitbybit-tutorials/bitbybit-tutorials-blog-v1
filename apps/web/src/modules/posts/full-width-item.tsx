@@ -16,7 +16,6 @@ const styles = css`
   border-radius: 8px;
   display: flex;
   flex-direction: column-reverse;
-  margin-bottom: 1rem;
   overflow: hidden;
 
   .description {

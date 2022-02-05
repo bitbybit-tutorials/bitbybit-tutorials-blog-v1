@@ -47,15 +47,14 @@ const styles = css`
     border-bottom: 3px solid ${THEME.input.border};
     font-size: 1.6rem;
     outline: none;
-    padding: 0 2rem 0.5rem;
+    padding: 0 0 0.5rem;
     flex: 1;
-    margin-right: 2rem;
+    margin-right: 1rem;
   }
 
   .search-list {
     height: 100%;
     overflow-y: scroll;
-    padding-right: 4.5rem;
   }
 
   .list-item {
@@ -63,7 +62,7 @@ const styles = css`
     border-bottom: 1px solid ${THEME.search.rowBorder};
 
     &-link {
-      padding: 1.5rem 2rem;
+      padding: 0.8rem;
       display: block;
     }
     &:hover {
@@ -96,11 +95,21 @@ const styles = css`
     .input {
       border-bottom: 4px solid ${THEME.input.border};
       font-size: 2.6rem;
+      padding: 0 2rem 0.5rem;
+      margin-right: 2rem;
     }
     .close-btn {
       width: 3rem;
       height: 3rem;
       font-size: 1.4rem;
+    }
+    .search-list {
+      padding-right: 4.5rem;
+    }
+    .list-item {
+      &-link {
+        padding: 1.5rem 2rem;
+      }
     }
     .no-results {
       margin-top: 3rem;
@@ -115,12 +124,17 @@ const styles = css`
 const closeBtnStyles = css`
   border-radius: 8px;
   cursor: pointer;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.8rem;
+  height: 1.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1rem;
+
+  @media only screen and (min-width: ${BREAKPOINTS.medium}) {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 `;
 
 type Props = {

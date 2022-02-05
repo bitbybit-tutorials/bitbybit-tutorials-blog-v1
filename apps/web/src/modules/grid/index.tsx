@@ -26,10 +26,8 @@ const GRID_MAP: { [key: number]: SerializedStyles } = {
 
 const gridStyles = (numColumns: number) => css`
   display: grid;
-  grid-gap: 1rem;
-  @media only screen and (min-width: ${BREAKPOINTS.big}) {
-    grid-gap: 1rem;
-  }
+  grid-gap: 1.5rem;
+
   @media only screen and (min-width: ${BREAKPOINTS.large}) {
     grid-gap: 2rem;
   }

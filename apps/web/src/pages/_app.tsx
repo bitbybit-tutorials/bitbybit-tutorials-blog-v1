@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 import type { AppProps } from "next/app";
+import { useRouter } from "next/router";
 
 import Layout from "modules/layout/layout";
 import { PostsContext } from "modules/posts/posts-context";
@@ -19,19 +20,34 @@ try {
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const [showSearch, setShowSearch] = useState(false);
+  const [history, setHistory] = useState<string[]>([]);
+  const router = useRouter();
 
   const toggleSearch = (state: boolean) => setShowSearch(state);
 
   useEffect(() => {
-    logEvent("Page Visited", {});
+    const { asPath } = router;
+    setHistory([asPath]);
   }, []);
+
+  useEffect(() => {
+    const { asPath } = router;
+    if (history.length === 2) {
+      setHistory(history.splice(0, 1));
+    }
+    setHistory([...history, asPath]);
+
+    logEvent("Page Visited", {});
+  }, [router]);
+
+  useEffect;
 
   return (
     <PostsContext.Provider value={{ posts }}>
       <SearchContext.Provider value={{ showSearch, toggleSearch }}>
         <Layout>
           {globalStyles}
-          <Component {...pageProps} />
+          <Component history={history} {...pageProps} />
           <SearchModal show={showSearch} />
         </Layout>
       </SearchContext.Provider>

@@ -77,6 +77,7 @@ export const globalStyles = (
       }
       .input {
         color: ${THEME.input.text};
+        min-width: 0;
       }
       ::selection {
         background-color: ${THEME.selection.background};

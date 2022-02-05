@@ -17,12 +17,12 @@ const styles = css`
   }
   @media only screen and (min-width: ${BREAKPOINTS.medium}) {
     .main {
-      padding: 0 2.5rem;
+      padding: 0 2.5rem 4rem;
     }
   }
   @media only screen and (min-width: ${BREAKPOINTS.large}) {
     .main {
-      padding: 0 8rem;
+      padding: 0 8rem 4rem;
     }
   }
   @media only screen and (min-width: ${BREAKPOINTS.extraLarge}) {

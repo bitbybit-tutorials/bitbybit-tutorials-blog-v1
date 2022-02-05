@@ -34,11 +34,12 @@ export const typographyStyles = css`
   }
   .headingBig {
     font-size: ${FONT_SIZES.big};
-    line-height: 1.8rem;
+    line-height: 2rem;
   }
   .headingLg {
     font-size: ${FONT_SIZES.big};
-    line-height: 2.2rem;
+    line-height: 2rem;
+
     @media only screen and (min-width: ${BREAKPOINTS.medium}) {
       font-size: ${FONT_SIZES.large};
       line-height: 2.4rem;
@@ -46,14 +47,15 @@ export const typographyStyles = css`
   }
   .headingXl {
     font-size: ${FONT_SIZES.big};
-    line-height: 1.2;
+    line-height: 2rem;
 
     @media only screen and (min-width: ${BREAKPOINTS.medium}) {
       font-size: ${FONT_SIZES.large};
-      margin-bottom: 0.6rem;
+      line-height: 2.4rem;
     }
 
     @media only screen and (min-width: ${BREAKPOINTS.big}) {
+      line-height: 2.8rem;
       font-size: ${FONT_SIZES.extraLarge};
     }
   }
@@ -66,13 +68,13 @@ export const typographyStyles = css`
   }
   .sectionHeading {
     color: ${THEME.heading.section};
-    font-size: ${FONT_SIZES.medium};
+    font-size: ${FONT_SIZES.small};
     font-family: ${FONT_NAMES.serifRegular};
     letter-spacing: 2px;
     text-transform: uppercase;
 
     @media only screen and (min-width: ${BREAKPOINTS.medium}) {
-      font-size: ${FONT_SIZES.big};
+      font-size: ${FONT_SIZES.medium};
     }
   }
   .textExtraSm {
@@ -87,7 +89,6 @@ export const typographyStyles = css`
   }
   .textMd {
     font-size: ${FONT_SIZES.small};
-    line-height: 1.8rem;
 
     @media only screen and (min-width: ${BREAKPOINTS.medium}) {
       font-size: ${FONT_SIZES.medium};
