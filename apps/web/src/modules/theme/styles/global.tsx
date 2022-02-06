@@ -47,8 +47,13 @@ export const globalStyles = (
       }
       pre {
         font-family: ${FONT_NAMES.monoRegular}, monospace;
-        font-size: ${FONT_SIZES.small};
-        line-height: 1.6rem;
+        font-size: ${FONT_SIZES.extraSmall};
+        line-height: 1.4rem;
+
+        @media only screen and (min-width: ${BREAKPOINTS.medium}) {
+          font-size: ${FONT_SIZES.small};
+          line-height: 1.6rem;
+        }
       }
       p {
         font-size: ${FONT_SIZES.small};
