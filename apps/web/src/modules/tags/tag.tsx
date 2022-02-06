@@ -65,7 +65,7 @@ const Wrapper = ({ children, disable, name }: WrapperProps) => {
 
   return (
     <Link
-      href="/categories/[...page]"
+      href="/categories/[[...pages]]"
       as={`/categories/${transformTitleToSlug(name)}`}
     >
       <a>{children}</a>

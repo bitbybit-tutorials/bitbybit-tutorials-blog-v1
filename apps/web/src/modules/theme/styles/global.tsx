@@ -80,6 +80,7 @@ export const globalStyles = (
       .input {
         color: ${THEME.input.text};
         min-width: 0;
+        -webkit-appearance: none;
       }
       ::selection {
         background-color: ${THEME.selection.background};

@@ -27,11 +27,18 @@ const styles = css`
     position: absolute;
     left: -2.2rem;
     transition: opacity 0.25s ease-in-out;
+    display: none;
   }
 
   @media only screen and (min-width: ${BREAKPOINTS.medium}) {
     margin-bottom: 1.5rem;
     margin-top: 3rem;
+  }
+
+  @media only screen and (min-width: ${BREAKPOINTS.big}) {
+    .anchor-link {
+      display: inline-block;
+    }
   }
 `;
 

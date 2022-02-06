@@ -119,10 +119,10 @@ export default function Post({ history, post, relatedPosts }: Props) {
     toggleSearch(false);
 
     // Get category breadcrumb
-    if (history[0]?.includes("/categories/")) {
-      const category = history[0].split("/categories/")[1];
+    if (history[1]?.includes("/categories/")) {
+      const category = history[1].split("/")[2];
       const newBreadcrumb = {
-        route: history[0],
+        route: history[1],
         title: transformSlugToTitle(category),
       };
       setBreadCrumbs([...breadcrumbs, newBreadcrumb]);
