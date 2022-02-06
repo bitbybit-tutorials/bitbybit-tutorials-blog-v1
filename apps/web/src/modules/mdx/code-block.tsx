@@ -3,6 +3,7 @@ import Highlight, { defaultProps } from "prism-react-renderer";
 
 import { THEME } from "modules/theme/theme";
 import { CUSTOM_PRISM_THEME } from "./custom-prism-theme";
+import { BREAKPOINTS } from "modules/theme/constants/breakpoints";
 
 const containerStyles = css`
   position: relative;
@@ -19,12 +20,16 @@ const codeBlockStyles = (extraMargin: boolean) => css`
 
 const metaStyles = css`
   position: absolute;
-  top: -2.1rem;
+  top: -1.8rem;
   right: 2rem;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   padding: 0.1rem 1rem 0.5rem;
   background-color: ${THEME.codeblock.background};
+
+  @media only screen and (min-width: ${BREAKPOINTS.medium}) {
+    top: -2.1rem;
+  }
 `;
 
 type Props = {

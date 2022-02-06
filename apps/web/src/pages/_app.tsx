@@ -8,7 +8,8 @@ import { PostsContext } from "modules/posts/posts-context";
 import { SearchContext } from "modules/search/search-context";
 import SearchModal from "modules/search/search-modal";
 import { globalStyles } from "modules/theme/styles/global";
-import { logEvent } from "services/firebase";
+import { getAnalytics, logEvent } from "services/firebase";
+import { isProd } from "utils/environment";
 
 let posts: Post[] = [];
 try {
@@ -28,6 +29,10 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const { asPath } = router;
     setHistory([asPath]);
+
+    if (isProd) {
+      getAnalytics();
+    }
   }, []);
 
   useEffect(() => {
@@ -37,10 +42,10 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     }
     setHistory([...history, asPath]);
 
-    logEvent("Page Visited", {});
+    if (isProd) {
+      logEvent("Page Visited", { screen_name: asPath });
+    }
   }, [router]);
-
-  useEffect;
 
   return (
     <PostsContext.Provider value={{ posts }}>

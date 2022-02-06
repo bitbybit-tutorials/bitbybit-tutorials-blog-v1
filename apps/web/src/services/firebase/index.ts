@@ -1,3 +1,3 @@
-export { logEvent } from "./analytics";
+export { getAnalytics, logEvent } from "./analytics";
 
 export { getStorageImageRef, getImageUrl } from "./storage";
