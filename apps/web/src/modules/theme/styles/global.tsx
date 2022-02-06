@@ -78,8 +78,10 @@ export const globalStyles = (
         cursor: pointer;
       }
       .input {
+        border-radius: 0;
         color: ${THEME.input.text};
         min-width: 0;
+        outline: 0;
         -webkit-appearance: none;
       }
       ::selection {
