@@ -1,4 +1,3 @@
-import dynamic from "next/dynamic";
 import Head from "next/head";
 
 import Image from "modules/image";
@@ -25,19 +24,6 @@ export const MDX_COMPONENTS_MAP = {
   image: Image,
   inlineCode: InlineCode,
   // strong: (props) => <p><strong>{props.children}</strong></p>
+  // em: (props) => <i style={{color: 'goldenrod'}} {...props} />,
   ul: List,
-  // TestComponent: dynamic(() => import("modules/test-component")),
 };
-
-// <Example
-//   components={{
-//     // Rewrite `em`s (`*like so*`) to `i` with a goldenrod foreground color.
-//     em: (props) => <i style={{color: 'goldenrod'}} {...props} />,
-//     // Pass a layout (using the special `'wrapper'` key).
-//     wrapper: ({components, ...rest}) => <main {...rest} />,
-//     // Pass a component.
-//     Planet: () => 'Neptune',
-//     // This nested component can be used as `<theme.text>hi</theme.text>`
-//     theme: {text: (props) => <span style={{color: 'grey'}} {...props} />}
-//   }}
-// />
