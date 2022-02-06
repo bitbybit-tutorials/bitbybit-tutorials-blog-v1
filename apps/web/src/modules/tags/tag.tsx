@@ -13,7 +13,7 @@ const TAG_STYLES_MAP = {
     textClassName: TYPOGRAPHY_CLASSES_MAP.textExtraSm,
     css: css`
       padding: 4px 8px;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
       margin-right: 8px;
     `,
   },
@@ -21,7 +21,7 @@ const TAG_STYLES_MAP = {
     textClassName: TYPOGRAPHY_CLASSES_MAP.textExtraSm,
     css: css`
       padding: 4px 8px;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
       margin-right: 8px;
 
       @media only screen and (min-width: ${BREAKPOINTS.medium}) {

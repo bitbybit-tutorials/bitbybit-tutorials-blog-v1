@@ -46,7 +46,6 @@ export default function PostsPage({ activePage, posts, pagesCount }: Props) {
 
 export const getStaticPaths = async () => {
   const { totalCount } = getPosts();
-
   const pages = Math.ceil(totalCount / POSTS_PER_PAGE);
   const paths = Array.from(Array(pages).keys()).map((page) => ({
     params: {
@@ -65,11 +64,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const [_pagesPath = null, activePage = null] = pages;
 
   const offset = ((activePage ?? 1) - 1) * POSTS_PER_PAGE;
-
   const { posts, totalCount } = getPosts(POSTS_PER_PAGE, offset);
-
   const transformedAllPosts = await transformPosts(posts);
-
   const pagesCount = Math.ceil(totalCount / POSTS_PER_PAGE);
 
   return {
