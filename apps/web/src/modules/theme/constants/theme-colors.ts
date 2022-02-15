@@ -7,6 +7,11 @@ export const THEME_COLORS = css`
    *
    **/
   body[data-theme="light"] {
+    --theme-admonition-background: var(--color-purple-100);
+    --theme-admonition-border-caution: var(--color-yellow-300);
+    --theme-admonition-border-danger: var(--color-red-300);
+    --theme-admonition-border-info: var(--color-blue-200);
+    --theme-admonition-border-tip: var(--color-green-200);
     --theme-body-background: var(--color-white);
     --theme-body-text: var(--color-black);
     --theme-button-primary-background: var(--color-purple-500);
@@ -71,6 +76,11 @@ export const THEME_COLORS = css`
    *
    **/
   body[data-theme="dark"] {
+    --theme-admonition-background: var(--color-purple-900);
+    --theme-admonition-border-caution: var(--color-yellow-300);
+    --theme-admonition-border-danger: var(--color-red-300);
+    --theme-admonition-border-info: var(--color-blue-200);
+    --theme-admonition-border-tip: var(--color-green-200);
     --theme-body-background: var(--color-purple-1000);
     --theme-body-text: var(--color-white);
     --theme-button-primary-background: var(--color-purple-500);
@@ -92,13 +102,13 @@ export const THEME_COLORS = css`
     --theme-codeblock-char: #d8dee9;
     --theme-codeblock-comment: var(--color-purple-300);
     --theme-codeblock-keyword: rgb(197, 134, 192);
-    --theme-codeblock-primitive: var(--color-blueBorderDark);
+    --theme-codeblock-primitive: var(--color-blue-100);
     --theme-codeblock-string: #5fb3b3;
     --theme-codeblock-variable: var(--color-white);
     --theme-codeblock-boolean: #ff8b50;
     --theme-codeblock-punctuation: var(--color-white);
     --theme-codeblock-tag: #fc929e;
-    --theme-codeblock-function: var(--color-blueBorderDark);
+    --theme-codeblock-function: var(--color-blue-100);
     --theme-codeblock-className: rgb(236, 196, 141);
     --theme-codeblock-method: #6699cc;
     --theme-codeblock-operator: #fc929e;

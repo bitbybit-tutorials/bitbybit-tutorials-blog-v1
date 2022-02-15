@@ -47,7 +47,7 @@ export default function Footer() {
           <li className="item">
             <Image
               priority
-              src="/images/snoopy.png"
+              src="/images/logo/logo_icon_purple.svg"
               height={LOGO_SIZE}
               width={LOGO_SIZE}
               alt={"logo"}

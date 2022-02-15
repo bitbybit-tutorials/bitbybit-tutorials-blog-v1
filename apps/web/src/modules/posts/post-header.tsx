@@ -6,7 +6,7 @@ import { BREAKPOINTS } from "modules/theme/constants/breakpoints";
 import { TYPOGRAPHY_CLASSES_MAP } from "modules/theme/styles/typography";
 import { addMargin } from "modules/theme/utils/add-margin";
 import { formatDate } from "utils/formatDate";
-import fallbackImage from "public/images/snoopy.png";
+import fallbackImage from "public/images/logo/logo_icon_purple.svg";
 
 const styles = css`
   .title {

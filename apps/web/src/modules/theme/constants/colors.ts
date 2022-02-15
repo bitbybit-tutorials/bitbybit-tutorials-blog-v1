@@ -2,11 +2,8 @@ import { css } from "@emotion/react";
 
 export const COLOR_VARIABLES = css`
   --color-black: #000;
-  --color-greenCoolMaybeCode: rgb(37, 194, 160);
   --color-greenBackgroundLight: rgb(230, 246, 230);
-  --color-greenBorderLight: rgb(0, 148, 0);
   --color-greenBackgroundDark: rgb(0, 49, 0);
-  --color-greenBorderDark: rgb(0, 148, 0);
   --color-redBackgroundLight: rgb(255, 235, 236);
   --color-redBorderLight: rgb(225, 50, 56);
   --color-redBackgroundDark: rgb(75, 17, 19);
@@ -18,10 +15,12 @@ export const COLOR_VARIABLES = css`
   --color-blueBackgroundLight: rgb(238, 249, 253);
   --color-blueBorderLight: rgb(76, 179, 212);
   --color-blueBackgroundDark: rgb(25, 60, 71);
-  --color-blueBorderDark: rgb(76, 179, 212);
+  --color-blue-100: #4cb3d4;
+  --color-blue-200: #25c2a0;
   --color-blue-300: #0550ae;
   --color-blue-500: #0a3069;
   --color-blue-600: #24292f;
+  --color-green-200: #009400;
   --color-green-300: #116329;
   --color-purple-100: #ececf2;
   --color-purple-200: #d9d9e6;

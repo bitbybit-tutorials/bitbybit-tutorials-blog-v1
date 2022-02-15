@@ -7,7 +7,10 @@ import { useRouter } from "next/router";
 import { POSTS_PER_PAGE } from "modules/posts/constants/posts-constants";
 import Grid from "modules/grid";
 import { siteTitle } from "modules/layout/layout";
-import { getPosts } from "modules/posts/utils/posts-server-utils";
+import {
+  getPosts,
+  getReadingTime,
+} from "modules/posts/utils/posts-server-utils";
 import { getAllCategories } from "modules/posts/utils/posts-client-safe-utils";
 import Pagination from "modules/pagination";
 import PostsList from "modules/posts/posts-list";

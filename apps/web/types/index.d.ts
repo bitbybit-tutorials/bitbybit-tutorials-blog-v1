@@ -3,6 +3,15 @@
 
 /* THEME */
 type Theme = {
+  admonition: {
+    background: string;
+    border: {
+      caution: string;
+      danger: string;
+      info: string;
+      tip: string;
+    };
+  };
   body: {
     background: string;
     text: string;

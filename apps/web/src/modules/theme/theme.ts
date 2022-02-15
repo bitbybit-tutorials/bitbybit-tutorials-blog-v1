@@ -4,6 +4,15 @@ export const THEMES_MAP = {
 };
 
 export const THEME: Theme = {
+  admonition: {
+    background: "var(--theme-admonition-background)",
+    border: {
+      caution: "var(--theme-admonition-border-caution)",
+      danger: "var(--theme-admonition-border-danger)",
+      info: "var(--theme-admonition-border-info)",
+      tip: "var(--theme-admonition-border-tip)",
+    },
+  },
   body: {
     background: "var(--theme-body-background)",
     text: "var(--theme-body-text)",

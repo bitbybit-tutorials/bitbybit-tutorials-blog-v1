@@ -9,7 +9,7 @@ import { TYPOGRAPHY_CLASSES_MAP } from "modules/theme/styles/typography";
 import { UTILITY_CLASSES_MAP } from "modules/theme/styles/utilty";
 import { THEME } from "modules/theme/theme";
 import { formatDate } from "utils/formatDate";
-import fallbackImage from "public/images/snoopy.png";
+import fallbackImage from "public/images/logo/logo_icon_purple.svg";
 
 const styles = css`
   background-color: ${THEME.post.background};

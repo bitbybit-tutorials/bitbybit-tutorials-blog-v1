@@ -2,8 +2,6 @@
   {
     "abstract": "In this post we'll explore how we can create a smooth, responsive and intuitive swipe to delete in React Native and what challenges and limitations we might face.",
     "category": [
-      "JavaScript",
-      "React",
       "React Native"
     ],
     "created": "01-12-2021",
@@ -327,21 +325,6 @@
   {
     "category": [
       "JavaScript",
-      "React Native"
-    ],
-    "created": "01-12-2021",
-    "id": 3,
-    "image": "test.png",
-    "lastUpdated": "02-12-2021",
-    "title": "Post 3",
-    "type": "post",
-    "slug": "post-3",
-    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
-    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
-  },
-  {
-    "category": [
-      "JavaScript",
       "React",
       "React Native"
     ],
@@ -381,21 +364,6 @@
     "title": "Post 32",
     "type": "post",
     "slug": "post-32",
-    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
-    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
-  },
-  {
-    "category": [
-      "JavaScript",
-      "React Native"
-    ],
-    "created": "01-12-2021",
-    "id": 4,
-    "image": "test.png",
-    "lastUpdated": "02-12-2021",
-    "title": "Post 4",
-    "type": "post",
-    "slug": "post-4",
     "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   },
@@ -476,16 +444,40 @@
   },
   {
     "category": [
-      "JavaScript",
-      "Next.js"
+      "React Native"
     ],
-    "created": "02-12-2021",
+    "created": "07-02-2022",
     "id": 2,
     "image": "test.png",
-    "lastUpdated": "03-12-2021",
-    "title": "Implementing a WhatsApp like Swipe to Delete Feature in React Native",
+    "title": "React Native Push Notifications with Airship - Part 1 - Setup",
     "type": "post",
     "slug": "post-2",
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
+  },
+  {
+    "category": [
+      "React Native"
+    ],
+    "created": "07-02-2022",
+    "id": 4,
+    "image": "test.png",
+    "title": "React Native Push Notifications with Airship - Part 2 - Send Notifications Programmatically",
+    "type": "post",
+    "slug": "post-3",
+    "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
+  },
+  {
+    "category": [
+      "React Native"
+    ],
+    "created": "07-02-2022",
+    "id": 3,
+    "image": "test.png",
+    "title": "React Native Push Notifications with Airship - Part 3 - Advanced features",
+    "type": "post",
+    "slug": "post-4",
     "blurDataUrl": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAQDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAQMEAwAAAAAAAAAAAAABAgADBAUHERITIVGR/8QAFQEBAQAAAAAAAAAAAAAAAAAABAb/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAjH/2gAMAwEAAhEDEQA/AIzqxc13y+FD16rBMLZKoLk8R1A7D0PJ+xESqnAX/9k=",
     "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bitbybit-tutorials.appspot.com/o/posts%2Ftest-image.jpeg?alt=media&token=4311e85d-8b19-44e6-81ef-5dc3786e7d68"
   }
