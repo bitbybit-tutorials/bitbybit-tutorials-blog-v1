@@ -18,8 +18,8 @@ const iconStyles = css`
 
 const fullLogoStyles = css`
   display: none;
+  width: 10.5rem;
   height: 2.25rem;
-  width: 12rem;
   position: relative;
   margin: 0;
 
@@ -37,10 +37,18 @@ export default function Logo({ onClick }: Props) {
     <Link href="/">
       <a onClick={onClick}>
         <span css={iconStyles}>
-          <Image priority src="/images/logo-icon.png" alt={"logo"} />
+          <Image
+            priority
+            src="/images/logo/logo_icon_purple.svg"
+            alt={"logo"}
+          />
         </span>
         <span css={fullLogoStyles}>
-          <Image priority src="/images/logo-full.png" alt={"logo"} />
+          <Image
+            priority
+            src="/images/logo/logo_full_icon_purple_text_black.svg"
+            alt={"logo"}
+          />
         </span>
       </a>
     </Link>
