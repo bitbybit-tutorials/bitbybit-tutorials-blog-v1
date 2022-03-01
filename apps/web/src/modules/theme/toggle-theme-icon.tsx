@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
+import { useContext } from "react";
 import { IoMoonSharp, IoSunnySharp } from "react-icons/io5";
 import { css } from "@emotion/react";
 
 import { THEMES_MAP, THEME } from "./theme";
+import { ThemeContext } from "modules/theme/theme-context";
 import { BREAKPOINTS } from "./constants/breakpoints";
 
 const styles = css`
@@ -18,21 +19,10 @@ const styles = css`
 `;
 
 export default function ToggleThemeIcon() {
-  const [activeTheme, setActiveTheme] = useState(document.body.dataset.theme);
-  const inactiveTheme =
-    activeTheme === THEMES_MAP.light ? THEMES_MAP.dark : THEMES_MAP.light;
-
-  useEffect(() => {
-    document.body.dataset.theme = activeTheme;
-    activeTheme && window.localStorage.setItem("theme", activeTheme);
-  }, [activeTheme]);
+  const { activeTheme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <span
-      className="icon"
-      css={styles}
-      onClick={() => setActiveTheme(inactiveTheme)}
-    >
+    <span className="icon" css={styles} onClick={toggleTheme}>
       {activeTheme === THEMES_MAP.light ? (
         <IoSunnySharp className="icon" />
       ) : (
