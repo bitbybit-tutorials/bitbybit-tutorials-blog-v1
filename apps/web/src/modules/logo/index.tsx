@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import { css } from "@emotion/react";
 
+import Image from "next/image";
 import Link from "next/link";
 
-import Image from "modules/image";
-import { THEMES_MAP } from "modules/theme/theme";
 import { BREAKPOINTS } from "modules/theme/constants/breakpoints";
 import { ThemeContext } from "modules/theme/theme-context";
+import { THEMES_MAP } from "modules/theme/theme";
 
 const iconStyles = css`
   display: block;
@@ -45,20 +45,22 @@ export default function Logo({ onClick }: Props) {
       <a onClick={onClick}>
         <span css={iconStyles}>
           <Image
-            priority
             src="/images/logo/logo_icon_purple.svg"
-            alt={"logo"}
+            alt="Logo icon"
+            layout="fill"
+            objectFit="cover"
           />
         </span>
         {activeTheme && (
           <span css={fullLogoStyles}>
             <Image
-              priority
               src={`/images/logo/logo_full_icon_purple_text_${
                 (activeTheme === THEMES_MAP.light && "black") ||
                 (activeTheme === THEMES_MAP.dark && "white")
               }.svg`}
-              alt={"logo"}
+              alt="Logo full text"
+              layout="fill"
+              objectFit="cover"
             />
           </span>
         )}

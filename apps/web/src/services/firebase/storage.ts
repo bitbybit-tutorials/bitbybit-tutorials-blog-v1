@@ -12,8 +12,23 @@ const storage = getStorage(firebaseApp);
 // Create a storage reference from our storage service
 export const getStorageImageRef = (path: string) => ref(storage, path);
 
-// Download image
-export const getImageUrl = async (
+export const getDirectImageUrl = ({
+  accessToken,
+  bucket = process.env.NEXT_PUBLIC_FIREBASE_DEFAULT_STORAGE_BUCKET,
+  folder,
+  imageName,
+}: {
+  accessToken?: string;
+  bucket?: string | undefined;
+  folder: string;
+  imageName: string;
+}) => {
+  return `https://firebasestorage.googleapis.com/v0/b/${bucket}/o/${encodeURIComponent(
+    `${folder}/${imageName}`
+  )}?alt=media${accessToken ? `&token=${accessToken}` : ""}`;
+};
+
+export const getSdkImageUrl = async (
   storageRef: StorageReference
 ): Promise<string | any> => {
   try {

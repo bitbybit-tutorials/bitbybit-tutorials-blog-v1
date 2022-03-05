@@ -23,7 +23,7 @@ export const MDX_COMPONENTS_MAP = {
   h3: (props: any) => HEADINGS_MAP.h3(props.children),
   h4: (props: any) => HEADINGS_MAP.h4(props.children),
   Head,
-  image: Image,
+  Image,
   inlineCode: InlineCode,
   // strong: (props) => <p><strong>{props.children}</strong></p>
   // em: (props) => <i style={{color: 'goldenrod'}} {...props} />,

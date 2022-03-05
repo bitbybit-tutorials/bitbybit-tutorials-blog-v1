@@ -10,7 +10,7 @@ import { serialize } from "next-mdx-remote/serialize";
 
 import { getSlugFromFileName } from "./posts-client-safe-utils";
 import { JSON_DIST, POSTS_DIR } from "../constants/posts-constants";
-import { getStorageImageRef, getImageUrl } from "services/firebase";
+import { getDirectImageUrl } from "services/firebase";
 import { createPlaceholderImage } from "utils/image";
 import { transformTitleToSlug } from "utils/text-transform";
 
@@ -126,8 +126,10 @@ export const scrapeHeadings = (rawSource: string) =>
 
 export const transformPost = async (post: Post) => {
   // Get image urls
-  const storageRef = getStorageImageRef(`posts/test-image.jpeg`);
-  const url = await getImageUrl(storageRef);
+  const url = getDirectImageUrl({
+    folder: "posts",
+    imageName: "test-image.jpeg",
+  });
 
   // Convert image into a low-res image, encoded as Base64 string
   const base64 = await createPlaceholderImage(url);
@@ -142,8 +144,10 @@ export const transformPosts = async (posts: PostRaw[]) => {
   return await Promise.all(
     posts.map(async (post) => {
       // Get image urls
-      const storageRef = getStorageImageRef(`posts/test-image.jpeg`);
-      const url = await getImageUrl(storageRef);
+      const url = getDirectImageUrl({
+        folder: "posts",
+        imageName: "test-image.jpeg",
+      });
 
       // Convert image into a low-res image, encoded as Base64 string
       const base64 = await createPlaceholderImage(url);

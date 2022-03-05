@@ -1,3 +1,7 @@
 export { getAnalytics, logEvent } from "./analytics";
 
-export { getStorageImageRef, getImageUrl } from "./storage";
+export {
+  getDirectImageUrl,
+  getSdkImageUrl,
+  getStorageImageRef,
+} from "./storage";

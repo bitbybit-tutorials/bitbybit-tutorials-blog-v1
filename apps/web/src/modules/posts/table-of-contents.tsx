@@ -15,7 +15,13 @@ const styles = css`
     position: relative;
     padding-left: 12px;
   }
-  .active-item {
+  .indent {
+    margin-left: 1rem;
+  }
+  .indent-2x {
+    margin-left: 2rem;
+  }
+  .active-link {
     color: ${THEME.nav.link.active};
     &:before {
       content: "";
@@ -38,20 +44,28 @@ export default function TableOfContents({ activeId, items }: Props) {
 
   const onClick = (id: string) => setActiveItemId(id);
 
-  function getClassNamesBtn(id: string) {
+  function getClassNamesItem(level: number) {
+    const classes = ["item"];
+    if (level === 3) {
+      classes.push("indent");
+    } else if (level === 4) {
+      classes.push("indent-2x");
+    }
+    return classes.join(" ");
+  }
+
+  function getClassNamesLink(id: string) {
     const classes = [
       TYPOGRAPHY_CLASSES_MAP.textSm,
       TYPOGRAPHY_CLASSES_MAP.link,
     ];
-
     if (activeId) {
       if (id === activeId) {
-        classes.push("active-item");
+        classes.push("active-link");
       }
     } else if (id === activeItemId) {
-      classes.push("active-item");
+      classes.push("active-link");
     }
-
     return classes.join(" ");
   }
 
@@ -77,10 +91,10 @@ export default function TableOfContents({ activeId, items }: Props) {
       <ul>
         {items.map((item, index) => {
           return (
-            <li className="item" key={`${index}`}>
+            <li className={getClassNamesItem(item.level)} key={`${index}`}>
               <Link href={`#${item.id}`}>
                 <a
-                  className={getClassNamesBtn(item.id)}
+                  className={getClassNamesLink(item.id)}
                   id={item.id}
                   onClick={() => onClick(item.id)}
                 >

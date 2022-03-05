@@ -46,7 +46,6 @@ export default function Footer() {
         <ul className="nav-list">
           <li className="item">
             <Image
-              priority
               src="/images/logo/logo_icon_purple.svg"
               height={LOGO_SIZE}
               width={LOGO_SIZE}
