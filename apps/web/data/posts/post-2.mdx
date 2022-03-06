@@ -42,8 +42,39 @@ If you don't find Airship to be a good fit for you, here are some notable altern
 
 This is going to be a 3 part series where we explore the initial setup process required to start sending push notifications via the dashboard in part 1, then we are going to spin up a local Node.js server and see how we can send push notifications programatically in part 2, and finally we are going to cover some more advanced Airship SDK features such as audience segmentation and persisted rich media messages in part 3.
 
-## Create and Configure an Airship Project
+## Installation
+
+Let's create a new React Native app and install the [Airship library](https://github.com/urbanairship/react-native-module).
+
+```js command-line
+npx react-native init pushNotificationsAirship
+cd pushNotificationsAirship
+
+npm i urbanairship-react-native
+npx pod-install
+```
+
+I've changed the iOS bundle identifier / Android package name to `com.bitbybit.pushnotificationsairship` to make things more neat. That's out of scope for this post but you can check out [this very helpful Medium article](https://medium.com/@devesu/how-to-change-bundle-identifier-of-ios-app-and-package-name-of-android-app-within-react-native-app-4fbdd6679aa2) on how to do that.
 
 ## iOS Setup
 
+### Prerequisites
+
+You need to be enrolled in [Apple's Developer Program](https://developer.apple.com/programs/) which costs around £80. There are no workarounds for that unfortunately.
+
+We need to register an App ID or you can use an existing one. Log in to your [Apple Developer Account](https://developer.apple.com/) and select `Certificates, IDs & Profiles -> Identifiers -> +`. Then choose `App IDs` and `Continue`.
+
+<div style={{ width: "100%", height: "25rem", position: "relative" }}>
+  <Image
+    alt="Register App ID"
+    generateSrc={{ folder: "posts", imageName: "test-image.jpeg" }}
+    layout="fill"
+    objectFit="cover"
+  />
+</div>
+
 ## Android Setup
+
+## Create and Configure an Airship Project
+
+Register with Airship and create a new project. We'll need to configure it for both iOS and Android devices.

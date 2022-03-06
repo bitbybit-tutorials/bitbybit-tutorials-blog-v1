@@ -1,8 +1,6 @@
 {
   "abstract": "In this post we'll explore how we can create a smooth, responsive and intuitive swipe to delete in React Native and what challenges and limitations we might face.",
   "category": [
-    "JavaScript",
-    "React",
     "React Native"
   ],
   "created": "01-12-2021",
@@ -25,8 +23,6 @@
     "scope": {
       "abstract": "In this post we'll explore how we can create a smooth, responsive and intuitive swipe to delete in React Native and what challenges and limitations we might face.",
       "category": [
-        "JavaScript",
-        "React",
         "React Native"
       ],
       "created": "01-12-2021",

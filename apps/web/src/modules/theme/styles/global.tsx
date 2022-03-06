@@ -71,6 +71,17 @@ export const globalStyles = (
         margin: 0;
         padding: 0;
       }
+      .list-item-paragraph {
+        font-size: ${FONT_SIZES.small};
+        line-height: 1.8rem;
+        margin-bottom: 1.5rem;
+
+        @media only screen and (min-width: ${BREAKPOINTS.medium}) {
+          font-size: ${FONT_SIZES.medium};
+          line-height: 2rem;
+          margin-bottom: 2.5rem;
+        }
+      }
       a {
         cursor: pointer;
         text-decoration: none;
@@ -101,6 +112,26 @@ export const globalStyles = (
       }
       .body-overflow-hidden {
         overflow: hidden;
+      }
+      .link-alt {
+        color: ${THEME.link.alt};
+        border-bottom: 1.5px solid transparent;
+        position: relative;
+
+        &:before {
+          content: "";
+          position: absolute;
+          bottom: -3px;
+          left: 0;
+          height: 1.5px;
+          width: 100%;
+          background-color: ${THEME.link.alt};
+          opacity: 0;
+          transition: opacity 0.25s ease-in-out;
+        }
+        &:hover:before {
+          opacity: 1;
+        }
       }
       ${typographyStyles}
       ${utilityStyles}
